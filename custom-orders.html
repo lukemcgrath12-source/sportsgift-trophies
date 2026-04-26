@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Orders | SportsGift Trophies</title>
+  <meta name="description" content="Order fully custom trophies, medals and awards. Upload your logo, choose materials and get a fast quote from our Sydney team." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: { blue: '#1a4d7c', cyan: '#2ab5c6' } },
+          fontFamily: { heading: ['Poppins', 'sans-serif'], body: ['Nunito', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>body { font-family: 'Nunito', sans-serif; } h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }</style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- NAV -->
+  <header class="bg-brand-blue shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html">
+        <span class="text-white font-heading font-bold text-xl tracking-tight">SportsGift<span class="text-brand-cyan">Trophies</span></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-blue-100">
+        <a data-nav href="index.html" class="hover:text-brand-cyan transition-colors">Home</a>
+        <a data-nav href="products.html" class="hover:text-brand-cyan transition-colors">Products</a>
+        <a data-nav href="engraving.html" class="hover:text-brand-cyan transition-colors">Engraving</a>
+        <a data-nav href="custom-orders.html" class="hover:text-brand-cyan transition-colors">Custom Orders</a>
+        <a data-nav href="gallery.html" class="hover:text-brand-cyan transition-colors">Gallery</a>
+        <a data-nav href="blog.html" class="hover:text-brand-cyan transition-colors">Blog</a>
+        <a data-nav href="about.html" class="hover:text-brand-cyan transition-colors">About</a>
+        <a href="contact.html" class="bg-brand-cyan text-white px-4 py-2 rounded-full hover:bg-cyan-500 transition-colors">Contact Us</a>
+      </nav>
+      <button id="menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-blue border-t border-blue-700 px-4 pb-4">
+      <a data-nav href="index.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Home</a>
+      <a data-nav href="products.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Products</a>
+      <a data-nav href="engraving.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Engraving</a>
+      <a data-nav href="custom-orders.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Custom Orders</a>
+      <a data-nav href="gallery.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Gallery</a>
+      <a data-nav href="blog.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Blog</a>
+      <a data-nav href="about.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">About</a>
+      <a href="contact.html" class="block mt-2 bg-brand-cyan text-white text-center px-4 py-2 rounded-full font-semibold hover:bg-cyan-500 transition-colors">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-brand-blue to-[#0f3057] text-white py-16 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold mb-3">Custom Orders</h1>
+      <p class="text-blue-100 text-lg">Fully bespoke awards designed around your club, event or brand.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-brand-blue text-center mb-12">How the Custom Order Process Works</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-14 h-14 bg-brand-blue text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+          <h3 class="font-bold text-brand-blue mb-2">Submit Your Brief</h3>
+          <p class="text-gray-600 text-sm">Fill in the quote form below with your requirements, quantities and any artwork or logo files.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 bg-brand-cyan text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+          <h3 class="font-bold text-brand-blue mb-2">Receive Your Quote</h3>
+          <p class="text-gray-600 text-sm">We'll get back to you within 1 business day with a detailed quote and product suggestions.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 bg-brand-blue text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+          <h3 class="font-bold text-brand-blue mb-2">Approve the Proof</h3>
+          <p class="text-gray-600 text-sm">We'll send a digital proof for your approval before any production begins.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 bg-brand-cyan text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+          <h3 class="font-bold text-brand-blue mb-2">Deliver &amp; Delight</h3>
+          <p class="text-gray-600 text-sm">Your finished order is carefully packed and dispatched Australia-wide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE FORM -->
+  <section class="py-16 px-4 bg-gray-50">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold text-brand-blue text-center mb-3">Request a Custom Quote</h2>
+      <p class="text-center text-gray-500 mb-10">Fill in as much detail as you can — the more we know, the faster we can quote.</p>
+      <form class="bg-white rounded-2xl shadow-sm p-8 space-y-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Your Name *</label>
+            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" placeholder="Jane Smith" required />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Organisation / Club</label>
+            <input type="text" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" placeholder="North Sydney Football Club" />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Email *</label>
+            <input type="email" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" placeholder="jane@example.com" required />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Phone</label>
+            <input type="tel" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" placeholder="0400 000 000" />
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Product Type *</label>
+            <select class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" required>
+              <option value="">Select…</option>
+              <option>Trophy</option>
+              <option>Medal</option>
+              <option>Plaque</option>
+              <option>Shield</option>
+              <option>Glass Award</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold text-gray-700 mb-1">Quantity *</label>
+            <input type="number" min="1" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" placeholder="e.g. 50" required />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Required By Date</label>
+          <input type="date" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" />
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Details &amp; Special Requirements</label>
+          <textarea rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" placeholder="Describe your award, engraving text, colours, logo requirements…"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 mb-1">Upload Artwork / Logo</label>
+          <input type="file" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-brand-blue file:text-white hover:file:bg-blue-800 cursor-pointer" accept=".ai,.eps,.svg,.pdf,.png,.jpg" />
+          <p class="text-xs text-gray-400 mt-1">Accepted: AI, EPS, SVG, PDF, PNG, JPG. Max 10MB.</p>
+        </div>
+        <button type="submit" class="w-full bg-brand-cyan text-white py-3 rounded-full font-semibold hover:bg-cyan-500 transition-colors">Submit Quote Request</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-blue text-blue-100 pt-12 pb-6 px-4">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <div>
+        <span class="text-white font-heading font-bold text-lg">SportsGift<span class="text-brand-cyan">Trophies</span></span>
+        <p class="mt-3 text-sm text-blue-200">Sydney's trusted source for trophies, medals, awards and custom engraving since 2005.</p>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Products</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="products.html" class="hover:text-brand-cyan transition-colors">All Products</a></li>
+          <li><a href="engraving.html" class="hover:text-brand-cyan transition-colors">Engraving Services</a></li>
+          <li><a href="custom-orders.html" class="hover:text-brand-cyan transition-colors">Custom Orders</a></li>
+          <li><a href="gallery.html" class="hover:text-brand-cyan transition-colors">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Company</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="about.html" class="hover:text-brand-cyan transition-colors">About Us</a></li>
+          <li><a href="blog.html" class="hover:text-brand-cyan transition-colors">Blog</a></li>
+          <li><a href="contact.html" class="hover:text-brand-cyan transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-white font-semibold mb-3">Contact</h4>
+        <ul class="space-y-2 text-sm text-blue-200">
+          <li>📍 Sydney, NSW, Australia</li>
+          <li>📞 <a href="tel:0295246716">(02) 9524 6716</a></li>
+          <li>✉️ <a href="mailto:sportsgift@sportsgift.com.au">sportsgift@sportsgift.com.au</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-blue-700 pt-6 text-center text-sm text-blue-300">
+      &copy; 2026 SportsGift Trophies. All rights reserved.
+      <span class="block mt-1 text-blue-400 text-xs">Website by <a href="https://www.latitude-marketing.com/" target="_blank" rel="noopener" class="hover:text-brand-cyan transition-colors">Latitude Marketing</a></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/nav.js"></script>
+</body>
+</html>
