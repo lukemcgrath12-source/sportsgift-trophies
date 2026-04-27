@@ -26,8 +26,8 @@
   <!-- NAV -->
   <header class="bg-brand-blue shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="index.html">
-        <span class="text-white font-heading font-bold text-xl tracking-tight">SportsGift<span class="text-brand-cyan">Trophies</span></span>
+      <a href="index.html" class="flex items-center">
+        <img src="BRAND_ASSETS/sportsgift-logo.png" alt="SportsGift Trophies" style="height:45px;width:auto;">
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-blue-100">
         <a data-nav href="index.html" class="hover:text-brand-cyan transition-colors">Home</a>
@@ -45,7 +45,7 @@
         </svg>
       </button>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-brand-blue border-t border-blue-700 px-4 pb-4">
+    <div id="mobile-menu" class="hidden md:hidden bg-brand-blue border-t border-blue-700 px-4 pb-4" style="display:none">
       <a data-nav href="index.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Home</a>
       <a data-nav href="products.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Products</a>
       <a data-nav href="engraving.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Engraving</a>
@@ -77,40 +77,78 @@
         <button class="bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-semibold hover:bg-brand-blue hover:text-white transition-colors">Engraving</button>
       </div>
 
-      <!-- Placeholder grid — replace divs with <img> tags when real photos are available -->
+      <!--
+        MASONRY GALLERY — HOW TO ADD PHOTOS:
+        Replace each inner <div class="placeholder..."> block with:
+          <img src="assets/images/gallery/your-photo.jpg" alt="Description" class="w-full rounded-2xl object-cover" />
+        The .break-inside-avoid wrapper handles the masonry column flow automatically.
+      -->
       <div class="columns-2 sm:columns-3 lg:columns-4 gap-4 space-y-4">
-        <div class="break-inside-avoid bg-gradient-to-br from-brand-blue to-brand-cyan rounded-2xl h-48 flex flex-col items-center justify-center text-white text-center p-4">
-          <span class="text-4xl mb-2">🏆</span>
-          <p class="text-sm font-semibold">Football Club Trophies</p>
+
+        <!-- Slot 1 -->
+        <div class="break-inside-avoid rounded-2xl overflow-hidden">
+          <div class="bg-gradient-to-br from-brand-blue to-brand-cyan h-48 flex flex-col items-center justify-center text-white text-center p-4 rounded-2xl">
+            <span class="text-4xl mb-2">🏆</span>
+            <p class="text-sm font-semibold">Football Club Trophies</p>
+          </div>
         </div>
-        <div class="break-inside-avoid bg-gradient-to-br from-[#0f3057] to-brand-blue rounded-2xl h-64 flex flex-col items-center justify-center text-white text-center p-4">
-          <span class="text-4xl mb-2">🥇</span>
-          <p class="text-sm font-semibold">Swimming Gala Medals</p>
+
+        <!-- Slot 2 -->
+        <div class="break-inside-avoid rounded-2xl overflow-hidden">
+          <div class="bg-gradient-to-br from-[#0f3057] to-brand-blue h-64 flex flex-col items-center justify-center text-white text-center p-4 rounded-2xl">
+            <span class="text-4xl mb-2">🥇</span>
+            <p class="text-sm font-semibold">Swimming Gala Medals</p>
+          </div>
         </div>
-        <div class="break-inside-avoid bg-gradient-to-br from-brand-cyan to-[#1a9eae] rounded-2xl h-52 flex flex-col items-center justify-center text-white text-center p-4">
-          <span class="text-4xl mb-2">🪪</span>
-          <p class="text-sm font-semibold">Corporate Plaques</p>
+
+        <!-- Slot 3 -->
+        <div class="break-inside-avoid rounded-2xl overflow-hidden">
+          <div class="bg-gradient-to-br from-brand-cyan to-[#1a9eae] h-52 flex flex-col items-center justify-center text-white text-center p-4 rounded-2xl">
+            <span class="text-4xl mb-2">🪪</span>
+            <p class="text-sm font-semibold">Corporate Plaques</p>
+          </div>
         </div>
-        <div class="break-inside-avoid bg-gradient-to-br from-brand-blue to-brand-cyan rounded-2xl h-44 flex flex-col items-center justify-center text-white text-center p-4">
-          <span class="text-4xl mb-2">🛡️</span>
-          <p class="text-sm font-semibold">Club Championship Shield</p>
+
+        <!-- Slot 4 -->
+        <div class="break-inside-avoid rounded-2xl overflow-hidden">
+          <div class="bg-gradient-to-br from-brand-blue to-brand-cyan h-44 flex flex-col items-center justify-center text-white text-center p-4 rounded-2xl">
+            <span class="text-4xl mb-2">🛡️</span>
+            <p class="text-sm font-semibold">Club Championship Shield</p>
+          </div>
         </div>
-        <div class="break-inside-avoid bg-gradient-to-br from-[#0f3057] to-brand-cyan rounded-2xl h-60 flex flex-col items-center justify-center text-white text-center p-4">
-          <span class="text-4xl mb-2">💎</span>
-          <p class="text-sm font-semibold">Crystal Glass Awards</p>
+
+        <!-- Slot 5 -->
+        <div class="break-inside-avoid rounded-2xl overflow-hidden">
+          <div class="bg-gradient-to-br from-[#0f3057] to-brand-cyan h-60 flex flex-col items-center justify-center text-white text-center p-4 rounded-2xl">
+            <span class="text-4xl mb-2">💎</span>
+            <p class="text-sm font-semibold">Crystal Glass Awards</p>
+          </div>
         </div>
-        <div class="break-inside-avoid bg-gradient-to-br from-brand-blue to-[#0f3057] rounded-2xl h-48 flex flex-col items-center justify-center text-white text-center p-4">
-          <span class="text-4xl mb-2">🎖️</span>
-          <p class="text-sm font-semibold">School Sports Day Awards</p>
+
+        <!-- Slot 6 -->
+        <div class="break-inside-avoid rounded-2xl overflow-hidden">
+          <div class="bg-gradient-to-br from-brand-blue to-[#0f3057] h-48 flex flex-col items-center justify-center text-white text-center p-4 rounded-2xl">
+            <span class="text-4xl mb-2">🎖️</span>
+            <p class="text-sm font-semibold">School Sports Day Awards</p>
+          </div>
         </div>
-        <div class="break-inside-avoid bg-gradient-to-br from-brand-cyan to-brand-blue rounded-2xl h-56 flex flex-col items-center justify-center text-white text-center p-4">
-          <span class="text-4xl mb-2">✏️</span>
-          <p class="text-sm font-semibold">Custom Engraving</p>
+
+        <!-- Slot 7 -->
+        <div class="break-inside-avoid rounded-2xl overflow-hidden">
+          <div class="bg-gradient-to-br from-brand-cyan to-brand-blue h-56 flex flex-col items-center justify-center text-white text-center p-4 rounded-2xl">
+            <span class="text-4xl mb-2">✏️</span>
+            <p class="text-sm font-semibold">Custom Engraving</p>
+          </div>
         </div>
-        <div class="break-inside-avoid bg-gradient-to-br from-brand-blue to-brand-cyan rounded-2xl h-44 flex flex-col items-center justify-center text-white text-center p-4">
-          <span class="text-4xl mb-2">🏅</span>
-          <p class="text-sm font-semibold">Netball Season Awards</p>
+
+        <!-- Slot 8 -->
+        <div class="break-inside-avoid rounded-2xl overflow-hidden">
+          <div class="bg-gradient-to-br from-brand-blue to-brand-cyan h-44 flex flex-col items-center justify-center text-white text-center p-4 rounded-2xl">
+            <span class="text-4xl mb-2">🏅</span>
+            <p class="text-sm font-semibold">Netball Season Awards</p>
+          </div>
         </div>
+
       </div>
 
       <div class="text-center mt-12">
