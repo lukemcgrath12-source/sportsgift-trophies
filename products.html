@@ -66,72 +66,110 @@
   <!-- CATEGORY FILTER -->
   <section class="py-10 px-4 bg-white">
     <div class="max-w-6xl mx-auto">
-      <div class="flex flex-wrap gap-3 justify-center mb-10">
-        <button class="bg-brand-blue text-white px-5 py-2 rounded-full text-sm font-semibold">All</button>
-        <button class="bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-semibold hover:bg-brand-blue hover:text-white transition-colors">Trophies</button>
-        <button class="bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-semibold hover:bg-brand-blue hover:text-white transition-colors">Medals</button>
-        <button class="bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-semibold hover:bg-brand-blue hover:text-white transition-colors">Plaques</button>
-        <button class="bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-semibold hover:bg-brand-blue hover:text-white transition-colors">Shields</button>
-        <button class="bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-semibold hover:bg-brand-blue hover:text-white transition-colors">Corporate</button>
-        <button class="bg-gray-100 text-gray-700 px-5 py-2 rounded-full text-sm font-semibold hover:bg-brand-blue hover:text-white transition-colors">Glass Awards</button>
+      <div class="flex flex-wrap gap-3 justify-center mb-10" id="filter-buttons">
+        <button data-filter="all"          class="filter-btn active px-5 py-2 rounded-full text-sm font-semibold transition-colors">All</button>
+        <button data-filter="trophy"       class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-colors">Trophies</button>
+        <button data-filter="medal"        class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-colors">Medals</button>
+        <button data-filter="plaque"       class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-colors">Plaques</button>
+        <button data-filter="shield"       class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-colors">Shields</button>
+        <button data-filter="corporate"    class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-colors">Corporate</button>
+        <button data-filter="glass-awards" class="filter-btn px-5 py-2 rounded-full text-sm font-semibold transition-colors">Glass Awards</button>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Product cards -->
-        <div class="bg-gray-50 rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-          <div class="h-48 bg-gradient-to-br from-brand-blue to-brand-cyan flex items-center justify-center text-6xl">🏆</div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+
+        <!-- Trophy: Classic Column -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden transition-shadow hover:shadow-md" data-category="trophy" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+          <div class="h-44 flex items-center justify-center" style="background:#f4f7fb;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.25">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 3h14M5 3a2 2 0 00-2 2v1a5 5 0 005 5h8a5 5 0 005-5V5a2 2 0 00-2-2M5 3v0M9 11v4m6-4v4M7 21h10M9 15h6"/>
+            </svg>
+          </div>
           <div class="p-6">
-            <span class="text-xs bg-blue-100 text-brand-blue font-semibold px-2 py-1 rounded-full">Trophy</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Trophy</span>
             <h3 class="font-bold text-brand-blue text-lg mt-2 mb-1">Classic Column Trophy</h3>
-            <p class="text-gray-600 text-sm mb-3">Timeless column trophy available in 3 sizes. Engraved base plate included.</p>
-            <a href="contact.html" class="inline-block bg-brand-cyan text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-cyan-500 transition-colors">Get a Quote</a>
+            <p class="text-gray-500 text-sm mb-4">Timeless column trophy available in 3 sizes. Engraved base plate included.</p>
+            <a href="contact.html" class="inline-block px-4 py-2 rounded-full text-sm font-semibold transition-colors" style="border:1.5px solid #2ab5c6;color:#2ab5c6;" onmouseover="this.style.background='#2ab5c6';this.style.color='#fff';" onmouseout="this.style.background='';this.style.color='#2ab5c6';">Get a Quote</a>
           </div>
         </div>
-        <div class="bg-gray-50 rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-          <div class="h-48 bg-gradient-to-br from-brand-blue to-brand-cyan flex items-center justify-center text-6xl">🥇</div>
+
+        <!-- Medal: Sport Medallions -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden transition-shadow hover:shadow-md" data-category="medal" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+          <div class="h-44 flex items-center justify-center" style="background:#f4f7fb;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.25">
+              <circle cx="12" cy="14" r="6" stroke="#2ab5c6" stroke-width="1.25"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 4l3 4 3-4M9 4H7l2 4m8-4h-2l-2 4"/>
+            </svg>
+          </div>
           <div class="p-6">
-            <span class="text-xs bg-blue-100 text-brand-blue font-semibold px-2 py-1 rounded-full">Medal</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Medal</span>
             <h3 class="font-bold text-brand-blue text-lg mt-2 mb-1">Sport Medallions</h3>
-            <p class="text-gray-600 text-sm mb-3">50mm zinc alloy medals. Choice of ribbon colours and custom printing.</p>
-            <a href="contact.html" class="inline-block bg-brand-cyan text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-cyan-500 transition-colors">Get a Quote</a>
+            <p class="text-gray-500 text-sm mb-4">50mm zinc alloy medals. Choice of ribbon colours and custom printing.</p>
+            <a href="contact.html" class="inline-block px-4 py-2 rounded-full text-sm font-semibold transition-colors" style="border:1.5px solid #2ab5c6;color:#2ab5c6;" onmouseover="this.style.background='#2ab5c6';this.style.color='#fff';" onmouseout="this.style.background='';this.style.color='#2ab5c6';">Get a Quote</a>
           </div>
         </div>
-        <div class="bg-gray-50 rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-          <div class="h-48 bg-gradient-to-br from-brand-blue to-brand-cyan flex items-center justify-center text-6xl">🪪</div>
+
+        <!-- Plaque: Timber Presentation -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden transition-shadow hover:shadow-md" data-category="plaque" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+          <div class="h-44 flex items-center justify-center" style="background:#f4f7fb;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.25">
+              <rect x="3" y="4" width="18" height="16" rx="2" stroke="#2ab5c6" stroke-width="1.25"/>
+              <path stroke-linecap="round" d="M7 9h10M7 13h6"/>
+            </svg>
+          </div>
           <div class="p-6">
-            <span class="text-xs bg-blue-100 text-brand-blue font-semibold px-2 py-1 rounded-full">Plaque</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Plaque</span>
             <h3 class="font-bold text-brand-blue text-lg mt-2 mb-1">Timber Presentation Plaque</h3>
-            <p class="text-gray-600 text-sm mb-3">Jarrah timber plaques with laser-engraved metal plate. Multiple sizes.</p>
-            <a href="contact.html" class="inline-block bg-brand-cyan text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-cyan-500 transition-colors">Get a Quote</a>
+            <p class="text-gray-500 text-sm mb-4">Jarrah timber plaques with laser-engraved metal plate. Multiple sizes.</p>
+            <a href="contact.html" class="inline-block px-4 py-2 rounded-full text-sm font-semibold transition-colors" style="border:1.5px solid #2ab5c6;color:#2ab5c6;" onmouseover="this.style.background='#2ab5c6';this.style.color='#fff';" onmouseout="this.style.background='';this.style.color='#2ab5c6';">Get a Quote</a>
           </div>
         </div>
-        <div class="bg-gray-50 rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-          <div class="h-48 bg-gradient-to-br from-brand-blue to-brand-cyan flex items-center justify-center text-6xl">🛡️</div>
+
+        <!-- Shield: Club Championship -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden transition-shadow hover:shadow-md" data-category="shield" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+          <div class="h-44 flex items-center justify-center" style="background:#f4f7fb;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.25">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
           <div class="p-6">
-            <span class="text-xs bg-blue-100 text-brand-blue font-semibold px-2 py-1 rounded-full">Shield</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Shield</span>
             <h3 class="font-bold text-brand-blue text-lg mt-2 mb-1">Club Championship Shield</h3>
-            <p class="text-gray-600 text-sm mb-3">Perpetual shield for club competitions. Sublimation or engraved plates.</p>
-            <a href="contact.html" class="inline-block bg-brand-cyan text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-cyan-500 transition-colors">Get a Quote</a>
+            <p class="text-gray-500 text-sm mb-4">Perpetual shield for club competitions. Sublimation or engraved plates.</p>
+            <a href="contact.html" class="inline-block px-4 py-2 rounded-full text-sm font-semibold transition-colors" style="border:1.5px solid #2ab5c6;color:#2ab5c6;" onmouseover="this.style.background='#2ab5c6';this.style.color='#fff';" onmouseout="this.style.background='';this.style.color='#2ab5c6';">Get a Quote</a>
           </div>
         </div>
-        <div class="bg-gray-50 rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-          <div class="h-48 bg-gradient-to-br from-brand-blue to-brand-cyan flex items-center justify-center text-6xl">🏅</div>
+
+        <!-- Corporate: Crystal Glass Award -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden transition-shadow hover:shadow-md" data-category="corporate" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+          <div class="h-44 flex items-center justify-center" style="background:#f4f7fb;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.25">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+            </svg>
+          </div>
           <div class="p-6">
-            <span class="text-xs bg-blue-100 text-brand-blue font-semibold px-2 py-1 rounded-full">Corporate</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Corporate</span>
             <h3 class="font-bold text-brand-blue text-lg mt-2 mb-1">Crystal Glass Award</h3>
-            <p class="text-gray-600 text-sm mb-3">Premium lead-free crystal. Laser engraving on the face or interior.</p>
-            <a href="contact.html" class="inline-block bg-brand-cyan text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-cyan-500 transition-colors">Get a Quote</a>
+            <p class="text-gray-500 text-sm mb-4">Premium lead-free crystal. Laser engraving on the face or interior.</p>
+            <a href="contact.html" class="inline-block px-4 py-2 rounded-full text-sm font-semibold transition-colors" style="border:1.5px solid #2ab5c6;color:#2ab5c6;" onmouseover="this.style.background='#2ab5c6';this.style.color='#fff';" onmouseout="this.style.background='';this.style.color='#2ab5c6';">Get a Quote</a>
           </div>
         </div>
-        <div class="bg-gray-50 rounded-2xl shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-          <div class="h-48 bg-gradient-to-br from-brand-blue to-brand-cyan flex items-center justify-center text-6xl">🎖️</div>
+
+        <!-- Glass Award: Optical Crystal -->
+        <div class="product-card bg-white rounded-2xl overflow-hidden transition-shadow hover:shadow-md" data-category="glass-awards" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+          <div class="h-44 flex items-center justify-center" style="background:#f4f7fb;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.25">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3l2.5 5.5L21 9.5l-4.5 4.5 1 6.5L12 17.5 6.5 20.5l1-6.5L3 9.5l6.5-.5L12 3z"/>
+            </svg>
+          </div>
           <div class="p-6">
-            <span class="text-xs bg-blue-100 text-brand-blue font-semibold px-2 py-1 rounded-full">Trophy</span>
-            <h3 class="font-bold text-brand-blue text-lg mt-2 mb-1">Resin Figure Trophy</h3>
-            <p class="text-gray-600 text-sm mb-3">Sport-specific figurines on marble base. Over 30 sports available.</p>
-            <a href="contact.html" class="inline-block bg-brand-cyan text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-cyan-500 transition-colors">Get a Quote</a>
+            <span class="text-xs font-semibold px-2 py-1 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Glass Award</span>
+            <h3 class="font-bold text-brand-blue text-lg mt-2 mb-1">Optical Glass Award</h3>
+            <p class="text-gray-500 text-sm mb-4">Optical clarity glass in a range of shapes. Deep laser engraving inside or on the face.</p>
+            <a href="contact.html" class="inline-block px-4 py-2 rounded-full text-sm font-semibold transition-colors" style="border:1.5px solid #2ab5c6;color:#2ab5c6;" onmouseover="this.style.background='#2ab5c6';this.style.color='#fff';" onmouseout="this.style.background='';this.style.color='#2ab5c6';">Get a Quote</a>
           </div>
         </div>
+
       </div>
 
       <div class="text-center mt-12">
@@ -139,6 +177,28 @@
       </div>
     </div>
   </section>
+
+  <style>
+    .filter-btn { background:#fff; color:#4a5568; border:1.5px solid #e2e8f0; }
+    .filter-btn:hover { border-color:#2ab5c6; color:#2ab5c6; }
+    .filter-btn.active { background:#2ab5c6; color:#fff; border-color:#2ab5c6; }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.product-card');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+          cards.forEach(card => {
+            card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+          });
+        });
+      });
+    });
+  </script>
 
   <!-- FOOTER -->
   <footer class="bg-brand-blue text-blue-100 pt-12 pb-6 px-4">
