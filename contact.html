@@ -217,5 +217,189 @@
   </footer>
 
   <script src="assets/js/nav.js"></script>
+
+  <!-- ENQUIRY RECEIVED MODAL -->
+  <div id="enquiry-overlay" style="
+    position:fixed;inset:0;z-index:9000;
+    background:rgba(0,0,0,0.85);
+    backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+    display:flex;align-items:center;justify-content:center;padding:1rem;
+    opacity:0;pointer-events:none;
+    transition:opacity 0.3s ease;
+  ">
+    <div id="enquiry-card" style="
+      background:#0f1f35;
+      border:1px solid rgba(42,181,198,0.35);
+      border-radius:16px;
+      max-width:620px;width:100%;
+      padding:3rem;
+      position:relative;
+      overflow:hidden;
+      transform:translateY(20px) scale(0.97);
+      transition:transform 0.5s cubic-bezier(0.34,1.56,0.64,1);
+    ">
+      <!-- Corner glow -->
+      <div style="
+        content:'';position:absolute;top:-60px;right:-60px;
+        width:180px;height:180px;
+        background:radial-gradient(circle,rgba(42,181,198,0.18) 0%,transparent 70%);
+        pointer-events:none;
+      "></div>
+
+      <!-- Close button -->
+      <button id="enquiry-close" onclick="closeModal()" aria-label="Close" style="
+        position:absolute;top:1rem;right:1rem;
+        width:32px;height:32px;border-radius:50%;
+        background:rgba(255,255,255,0.06);border:none;cursor:pointer;
+        color:rgba(255,255,255,0.4);font-size:18px;line-height:1;
+        display:flex;align-items:center;justify-content:center;
+        transition:background 0.2s,color 0.2s;
+      " onmouseover="this.style.background='rgba(255,255,255,0.12)';this.style.color='rgba(255,255,255,0.8)'"
+         onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.4)'">
+        ×
+      </button>
+
+      <!-- Eyebrow -->
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.5rem;">
+        <div style="flex:1;height:1px;background:rgba(42,181,198,0.3);"></div>
+        <span style="font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:2.5px;color:rgba(42,181,198,0.7);white-space:nowrap;">— ENQUIRY RECEIVED —</span>
+        <div style="flex:1;height:1px;background:rgba(42,181,198,0.3);"></div>
+      </div>
+
+      <!-- Icon box -->
+      <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
+        <div id="enquiry-icon" style="
+          width:64px;height:64px;border-radius:12px;
+          background:rgba(42,181,198,0.15);
+          border:1px solid rgba(42,181,198,0.4);
+          display:flex;align-items:center;justify-content:center;
+          font-size:28px;
+          transform:scale(0);
+          transition:transform 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.2s;
+        ">🏆</div>
+      </div>
+
+      <!-- Headline -->
+      <h2 style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:800;color:#fff;text-align:center;margin:0 0 0.75rem;line-height:1.3;">
+        We'll Be In <span style="color:#2ab5c6;">Touch Shortly.</span>
+      </h2>
+
+      <!-- Body -->
+      <p style="font-family:'Nunito',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-align:center;margin:0 0 1.5rem;line-height:1.6;">
+        Your trophy and awards enquiry has been received. Our team will contact you within 1 business day to discuss your order.
+      </p>
+
+      <!-- Divider -->
+      <div style="height:1px;background:linear-gradient(to right,transparent,rgba(42,181,198,0.25),transparent);margin-bottom:1.5rem;"></div>
+
+      <!-- Stats grid -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem;">
+        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:1rem;text-align:center;">
+          <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:#2ab5c6;line-height:1;">1 Day</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.3);margin-top:4px;">Response Time</div>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:1rem;text-align:center;">
+          <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:#2ab5c6;line-height:1;">5 ★</div>
+          <div style="font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.3);margin-top:4px;">Google Rating</div>
+        </div>
+      </div>
+
+      <!-- Buttons grid -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:0;">
+        <button onclick="closeModal()" style="
+          font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;
+          text-transform:uppercase;letter-spacing:1.2px;
+          color:#fff;background:transparent;
+          border:1.5px solid rgba(255,255,255,0.25);
+          border-radius:8px;padding:0.75rem;cursor:pointer;
+          transition:border-color 0.2s,color 0.2s;
+        " onmouseover="this.style.borderColor='rgba(255,255,255,0.6)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.25)'">
+          ← Back to Site
+        </button>
+        <a href="tel:0416106702" style="
+          font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;
+          text-transform:uppercase;letter-spacing:1.2px;
+          color:#2ab5c6;background:transparent;
+          border:1.5px solid rgba(42,181,198,0.4);
+          border-radius:8px;padding:0.75rem;
+          display:flex;align-items:center;justify-content:center;
+          text-decoration:none;
+          transition:border-color 0.2s,color 0.2s;
+        " onmouseover="this.style.borderColor='#2ab5c6'" onmouseout="this.style.borderColor='rgba(42,181,198,0.4)'">
+          📞 0416 106 702
+        </a>
+      </div>
+
+      <!-- Progress bar -->
+      <div style="position:absolute;bottom:0;left:0;width:100%;height:3px;background:rgba(255,255,255,0.05);">
+        <div id="enquiry-progress" style="
+          height:100%;
+          background:linear-gradient(to right,#1a4d7c,#2ab5c6);
+          transform-origin:left;transform:scaleX(1);
+          transition:none;
+        "></div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #enquiry-overlay.active { opacity:1; pointer-events:auto; }
+    #enquiry-overlay.active #enquiry-card { transform:translateY(0) scale(1); }
+    #enquiry-overlay.active #enquiry-icon { transform:scale(1); }
+    #enquiry-progress.animating {
+      transform:scaleX(0);
+      transition:transform 8s linear;
+    }
+  </style>
+
+  <script>
+    var _modalTimer = null;
+
+    function openModal() {
+      var overlay = document.getElementById('enquiry-overlay');
+      var progress = document.getElementById('enquiry-progress');
+
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      // Reset & animate progress bar
+      progress.classList.remove('animating');
+      void progress.offsetWidth; // force reflow
+      progress.classList.add('animating');
+
+      _modalTimer = setTimeout(closeModal, 8000);
+    }
+
+    function closeModal() {
+      var overlay = document.getElementById('enquiry-overlay');
+      var progress = document.getElementById('enquiry-progress');
+
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+      progress.classList.remove('animating');
+
+      if (_modalTimer) { clearTimeout(_modalTimer); _modalTimer = null; }
+    }
+
+    // Close on overlay backdrop click
+    document.getElementById('enquiry-overlay').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
+
+    // Intercept form submit → show modal (Netlify still receives the POST via fetch)
+    document.querySelector('form[name="contact"]').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = this;
+      var data = new FormData(form);
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString() })
+        .catch(function(){}) // show modal regardless
+        .finally(function() {
+          form.reset();
+          openModal();
+        });
+    });
+  </script>
+
 </body>
 </html>
