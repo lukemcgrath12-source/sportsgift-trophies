@@ -67,68 +67,78 @@
 
   <style>
     .catalogue-card {
-      border-top: 3px solid #2ab5c6 !important;
+      border-top: 4px solid #2ab5c6 !important;
       padding-top: 0 !important;
+      box-shadow: 0 4px 20px rgba(26,77,124,0.10) !important;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .catalogue-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(26,77,124,0.15) !important;
     }
     .catalogue-card > .flex.items-center {
-      padding-top: 1.5rem;
+      padding-top: 1.75rem;
     }
     .catalogue-btn {
       display:flex; align-items:center; gap:8px;
-      width:100%; padding:10px 16px; border-radius:9999px;
-      font-size:0.875rem; font-weight:600;
-      border:2px solid #1a4d7c; color:#1a4d7c;
-      background:#f0f9fa; transition:background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+      width:100%; padding:11px 18px; border-radius:9999px;
+      font-size:0.875rem; font-weight:600; color:#1a4d7c;
+      background:#f0f9fa;
+      border: 1.5px solid #d0e8f0;
+      border-left: 4px solid #2ab5c6;
+      transition:background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
     }
     .catalogue-btn:hover {
       background:#1a4d7c; color:#fff;
+      border-color:#1a4d7c;
       box-shadow:0 4px 12px rgba(26,77,124,0.18);
       transform:translateY(-2px);
     }
-    .catalogue-btn:hover .pdf-pill { background:#c53030; }
+    .catalogue-btn:hover .pdf-pill { background:rgba(255,255,255,0.25); color:#fff; }
     .pdf-pill {
-      margin-left:auto; background:#e53e3e; color:#fff;
+      margin-left:auto; background:#2ab5c6; color:#fff;
       font-size:10px; font-weight:700; padding:1px 6px;
       border-radius:9999px; flex-shrink:0; transition:background 0.18s;
     }
     .catalogue-btn-cyan {
       display:flex; align-items:center; justify-content:center; gap:8px;
-      width:100%; padding:10px 16px; border-radius:9999px;
-      font-size:0.875rem; font-weight:600;
+      width:100%; padding:12px 18px; border-radius:9999px;
+      font-size:0.875rem; font-weight:700;
       border:none; color:#fff; background:#2ab5c6;
       transition:background 0.18s, box-shadow 0.18s, transform 0.18s;
       text-decoration:none;
     }
     .catalogue-btn-cyan:hover {
       background:#1e9db0;
-      box-shadow:0 4px 12px rgba(42,181,198,0.28);
+      box-shadow:0 4px 16px rgba(42,181,198,0.35);
       transform:translateY(-2px);
     }
   </style>
 
   <!-- CATALOGUES -->
-  <section class="fade-section py-16 px-4" style="background:#f4f7fb;">
+  <section class="fade-section py-16 px-4" style="background:linear-gradient(135deg,#f0f7ff 0%,#e8f4f8 100%);border-top:4px solid #2ab5c6;">
     <div class="max-w-6xl mx-auto">
 
-      <div class="text-center mb-10">
-        <h2 class="text-3xl font-bold text-brand-blue mb-3">Browse Our 2026 Catalogues</h2>
-        <p class="text-gray-500 text-base max-w-xl mx-auto">Download our full supplier catalogues to explore the complete range. We stock products from Evaton and TCD — two of Australia's leading trophy and award suppliers.</p>
+      <div class="text-center mb-14">
+        <h2 class="text-4xl font-bold text-brand-blue mb-3">Browse Our 2026 Catalogues</h2>
+        <div style="width:40px;height:3px;background:#2ab5c6;margin:12px auto 0;border-radius:2px;"></div>
+        <p class="text-gray-500 text-base max-w-xl mx-auto mt-4">Download our full supplier catalogues to explore the complete range. We stock products from Evaton and TCD — two of Australia's leading trophy and award suppliers.</p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="catalogue-grid">
 
         <!-- All Sports / General -->
-        <div class="catalogue-card bg-white rounded-2xl p-6 flex flex-col gap-4" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#e8f8fa;">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
               <!-- Trophy silhouette -->
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M5 3h14M5 3a2 2 0 00-2 2v1a5 5 0 005 5h8a5 5 0 005-5V5a2 2 0 00-2-2M9 11v4m6-4v4M7 21h10M9 15h6"/>
               </svg>
             </div>
             <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">All Sports</span>
-              <h3 class="font-bold text-brand-blue mt-0.5">General Catalogue</h3>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">All Sports</span>
+              <h3 class="text-xl font-bold text-brand-blue mt-0.5">General Catalogue</h3>
             </div>
           </div>
           <div class="flex flex-col gap-2">
@@ -146,9 +156,9 @@
         </div>
 
         <!-- Aussie Rules -->
-        <div class="catalogue-card bg-white rounded-2xl p-6 flex flex-col gap-4" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#e8f8fa;">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
               <!-- Oval AFL ball -->
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
                 <ellipse cx="12" cy="12" rx="9" ry="5.5" stroke="#2ab5c6" stroke-width="1.5"/>
@@ -158,8 +168,8 @@
               </svg>
             </div>
             <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Aussie Rules</span>
-              <h3 class="font-bold text-brand-blue mt-0.5">AFL Catalogue</h3>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Aussie Rules</span>
+              <h3 class="text-xl font-bold text-brand-blue mt-0.5">AFL Catalogue</h3>
             </div>
           </div>
           <div class="flex flex-col gap-2">
@@ -177,9 +187,9 @@
         </div>
 
         <!-- Basketball -->
-        <div class="catalogue-card bg-white rounded-2xl p-6 flex flex-col gap-4" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#e8f8fa;">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
               <!-- Basketball: circle with curved seam lines -->
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
                 <circle cx="12" cy="12" r="9" stroke="#2ab5c6" stroke-width="1.5"/>
@@ -189,8 +199,8 @@
               </svg>
             </div>
             <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Basketball</span>
-              <h3 class="font-bold text-brand-blue mt-0.5">Basketball Catalogue</h3>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Basketball</span>
+              <h3 class="text-xl font-bold text-brand-blue mt-0.5">Basketball Catalogue</h3>
             </div>
           </div>
           <div class="flex flex-col gap-2">
@@ -203,9 +213,9 @@
         </div>
 
         <!-- Corporate Awards -->
-        <div class="catalogue-card bg-white rounded-2xl p-6 flex flex-col gap-4" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#e8f8fa;">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
               <!-- Ribbon/award rosette -->
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
                 <circle cx="12" cy="9" r="5" stroke="#2ab5c6" stroke-width="1.5"/>
@@ -213,8 +223,8 @@
               </svg>
             </div>
             <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Corporate</span>
-              <h3 class="font-bold text-brand-blue mt-0.5">Corporate Awards</h3>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Corporate</span>
+              <h3 class="text-xl font-bold text-brand-blue mt-0.5">Corporate Awards</h3>
             </div>
           </div>
           <div class="flex flex-col gap-2">
@@ -232,9 +242,9 @@
         </div>
 
         <!-- Dance -->
-        <div class="catalogue-card bg-white rounded-2xl p-6 flex flex-col gap-4" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#e8f8fa;">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
               <!-- Figure in motion -->
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
                 <circle cx="13" cy="4" r="1.5" stroke="#2ab5c6" stroke-width="1.5"/>
@@ -242,8 +252,8 @@
               </svg>
             </div>
             <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Dance</span>
-              <h3 class="font-bold text-brand-blue mt-0.5">Dance Catalogue</h3>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Dance</span>
+              <h3 class="text-xl font-bold text-brand-blue mt-0.5">Dance Catalogue</h3>
             </div>
           </div>
           <div class="flex flex-col gap-2">
@@ -261,9 +271,9 @@
         </div>
 
         <!-- Football -->
-        <div class="catalogue-card bg-white rounded-2xl p-6 flex flex-col gap-4" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#e8f8fa;">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
               <!-- Soccer ball: circle with pentagon patch pattern -->
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
                 <circle cx="12" cy="12" r="9" stroke="#2ab5c6" stroke-width="1.5"/>
@@ -275,8 +285,8 @@
               </svg>
             </div>
             <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Football</span>
-              <h3 class="font-bold text-brand-blue mt-0.5">Football Catalogue</h3>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Football</span>
+              <h3 class="text-xl font-bold text-brand-blue mt-0.5">Football Catalogue</h3>
             </div>
           </div>
           <div class="flex flex-col gap-2">
@@ -294,9 +304,9 @@
         </div>
 
         <!-- Netball -->
-        <div class="catalogue-card bg-white rounded-2xl p-6 flex flex-col gap-4" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#e8f8fa;">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
               <!-- Netball: ball with ring/hoop above -->
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
                 <circle cx="12" cy="14" r="6" stroke="#2ab5c6" stroke-width="1.5"/>
@@ -305,8 +315,8 @@
               </svg>
             </div>
             <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Netball</span>
-              <h3 class="font-bold text-brand-blue mt-0.5">Netball Catalogue</h3>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Netball</span>
+              <h3 class="text-xl font-bold text-brand-blue mt-0.5">Netball Catalogue</h3>
             </div>
           </div>
           <div class="flex flex-col gap-2">
@@ -324,9 +334,9 @@
         </div>
 
         <!-- Rugby -->
-        <div class="catalogue-card bg-white rounded-2xl p-6 flex flex-col gap-4" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#e8f8fa;">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
               <!-- Rugby ball ellipse with seam lines -->
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
                 <ellipse cx="12" cy="12" rx="9" ry="6" stroke="#2ab5c6" stroke-width="1.5"/>
@@ -336,8 +346,8 @@
               </svg>
             </div>
             <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">Rugby</span>
-              <h3 class="font-bold text-brand-blue mt-0.5">Rugby Catalogue</h3>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Rugby</span>
+              <h3 class="text-xl font-bold text-brand-blue mt-0.5">Rugby Catalogue</h3>
             </div>
           </div>
           <div class="flex flex-col gap-2">
@@ -355,9 +365,9 @@
         </div>
 
         <!-- Can't Find Your Sport? -->
-        <div class="catalogue-card bg-white rounded-2xl p-6 flex flex-col gap-4" style="border:1px solid #e2e8f0;box-shadow:0 1px 4px rgba(26,77,124,0.06);">
+        <div class="catalogue-card rounded-2xl p-7 flex flex-col gap-4" style="background:linear-gradient(135deg,#1a4d7c,#0f3057);border:1px solid #0f3057;">
           <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#e8f8fa;">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(42,181,198,0.18);">
               <!-- Trophy with question mark -->
               <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 3h6M7 3a2 2 0 00-2 2v1a5 5 0 005 5h4a5 5 0 005-5V5a2 2 0 00-2-2M9 11v3m6-3v3M7 20h10M9 14h6"/>
@@ -366,11 +376,11 @@
               </svg>
             </div>
             <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e8f8fa;color:#1a4d7c;">All Sports</span>
-              <h3 class="font-bold text-brand-blue mt-0.5">Can't Find Your Sport?</h3>
+              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:rgba(42,181,198,0.2);color:#7dd8e8;">All Sports</span>
+              <h3 class="text-xl font-bold text-white mt-0.5">Can't Find Your Sport?</h3>
             </div>
           </div>
-          <p class="text-sm text-gray-500 -mt-1">We cater for many sports beyond these catalogues — get in touch and we'll find the right award for you.</p>
+          <p class="text-sm -mt-1" style="color:rgba(255,255,255,0.72);">We cater for many sports beyond these catalogues — get in touch and we'll find the right award for you.</p>
           <div class="flex flex-col gap-2 mt-auto">
             <a href="contact.html" class="catalogue-btn-cyan">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
