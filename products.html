@@ -66,31 +66,52 @@
 
 
   <style>
-    #catalogue-grid::-webkit-scrollbar { display:none; }
     .catalogue-card {
-      width: 320px;
-      flex-shrink: 0;
-      scroll-snap-align: start;
-      border-top: 4px solid #2ab5c6 !important;
-      padding-top: 0 !important;
-      box-shadow: 0 4px 20px rgba(26,77,124,0.10) !important;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-radius: 1rem;
+      overflow: hidden;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 24px rgba(26,77,124,0.12);
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
     }
     .catalogue-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(26,77,124,0.15) !important;
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(26,77,124,0.18);
     }
-    .catalogue-card > .flex.items-center {
-      padding-top: 1.75rem;
+    .catalogue-banner {
+      height: 140px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 16px;
+    }
+    .catalogue-body {
+      background: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+    .catalogue-body h3 {
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: #1a4d7c;
+      margin: 0;
     }
     .catalogue-btn {
       display:flex; align-items:center; gap:8px;
-      width:100%; padding:11px 18px; border-radius:9999px;
-      font-size:0.875rem; font-weight:600; color:#1a4d7c;
+      width:100%; padding:10px 14px; border-radius:9999px;
+      font-size:0.8125rem; font-weight:600; color:#1a4d7c;
       background:#f0f9fa;
       border: 1.5px solid #d0e8f0;
       border-left: 4px solid #2ab5c6;
       transition:background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+      text-decoration: none;
     }
     .catalogue-btn:hover {
       background:#1a4d7c; color:#fff;
@@ -106,7 +127,7 @@
     }
     .catalogue-btn-cyan {
       display:flex; align-items:center; justify-content:center; gap:8px;
-      width:100%; padding:12px 18px; border-radius:9999px;
+      width:100%; padding:11px 18px; border-radius:9999px;
       font-size:0.875rem; font-weight:700;
       border:none; color:#fff; background:#2ab5c6;
       transition:background 0.18s, box-shadow 0.18s, transform 0.18s;
@@ -124,280 +145,245 @@
     <div class="max-w-6xl mx-auto">
 
       <div class="text-center mb-14">
-        <div class="hidden md:flex items-center justify-end gap-2 mb-4">
-          <button id="cat-prev" aria-label="Previous" onclick="document.getElementById('catalogue-grid').scrollBy({left:-344,behavior:'smooth'})" style="width:40px;height:40px;border-radius:50%;background:#2ab5c6;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.18s;" onmouseover="this.style.background='#1e9db0'" onmouseout="this.style.background='#2ab5c6'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-          </button>
-          <button id="cat-next" aria-label="Next" onclick="document.getElementById('catalogue-grid').scrollBy({left:344,behavior:'smooth'})" style="width:40px;height:40px;border-radius:50%;background:#2ab5c6;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.18s;" onmouseover="this.style.background='#1e9db0'" onmouseout="this.style.background='#2ab5c6'">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
-          </button>
-        </div>
         <h2 class="text-4xl font-bold text-brand-blue mb-3">Browse Our 2026 Catalogues</h2>
         <div style="width:40px;height:3px;background:#2ab5c6;margin:12px auto 0;border-radius:2px;"></div>
         <p class="text-gray-500 text-base max-w-xl mx-auto mt-4">Download our full supplier catalogues to explore the complete range. We stock products from Evaton and TCD — two of Australia's leading trophy and award suppliers.</p>
       </div>
 
-      <div id="catalogue-grid" style="display:flex;overflow-x:auto;gap:24px;padding:16px 8px 24px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
+      <div id="catalogue-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- All Sports / General -->
-        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
-              <!-- Trophy silhouette -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5 3h14M5 3a2 2 0 00-2 2v1a5 5 0 005 5h8a5 5 0 005-5V5a2 2 0 00-2-2M9 11v4m6-4v4M7 21h10M9 15h6"/>
-              </svg>
-            </div>
-            <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">All Sports</span>
-              <h3 class="text-xl font-bold text-brand-blue mt-0.5">General Catalogue</h3>
-            </div>
+        <div class="catalogue-card">
+          <div class="catalogue-banner" style="background:linear-gradient(135deg,#1a4d7c,#2ab5c6);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 3h14M5 3a2 2 0 00-2 2v1a5 5 0 005 5h8a5 5 0 005-5V5a2 2 0 00-2-2M9 11v4m6-4v4M7 21h10M9 15h6"/>
+            </svg>
+            <span style="color:rgba(255,255,255,0.85);font-size:0.875rem;font-weight:600;">All Sports</span>
           </div>
-          <div class="flex flex-col gap-2">
-            <a href="catalogues/2026-evaton-all-sports.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              Evaton All Sports 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
-            <a href="catalogues/2026-tcd-main.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              TCD Main Catalogue 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
+          <div class="catalogue-body">
+            <h3>General Catalogue</h3>
+            <div class="flex flex-col gap-2">
+              <a href="catalogues/2026-evaton-all-sports.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                Evaton All Sports 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+              <a href="catalogues/2026-tcd-main.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                TCD Main Catalogue 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Aussie Rules -->
-        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
-              <!-- Oval AFL ball -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
-                <ellipse cx="12" cy="12" rx="9" ry="5.5" stroke="#2ab5c6" stroke-width="1.5"/>
-                <path stroke-linecap="round" d="M3 12h18"/>
-                <path stroke-linecap="round" d="M12 6.5c1.5 1 2.5 3 2.5 5.5s-1 4.5-2.5 5.5"/>
-                <path stroke-linecap="round" d="M12 6.5c-1.5 1-2.5 3-2.5 5.5s1 4.5 2.5 5.5"/>
-              </svg>
-            </div>
-            <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Aussie Rules</span>
-              <h3 class="text-xl font-bold text-brand-blue mt-0.5">AFL Catalogue</h3>
-            </div>
+        <div class="catalogue-card">
+          <div class="catalogue-banner" style="background:linear-gradient(135deg,#1a4d7c,#1874AA);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5">
+              <ellipse cx="12" cy="12" rx="9" ry="5.5" stroke="#fff" stroke-width="1.5"/>
+              <path stroke-linecap="round" d="M3 12h18"/>
+              <path stroke-linecap="round" d="M12 6.5c1.5 1 2.5 3 2.5 5.5s-1 4.5-2.5 5.5"/>
+              <path stroke-linecap="round" d="M12 6.5c-1.5 1-2.5 3-2.5 5.5s1 4.5 2.5 5.5"/>
+            </svg>
+            <span style="color:rgba(255,255,255,0.85);font-size:0.875rem;font-weight:600;">Aussie Rules</span>
           </div>
-          <div class="flex flex-col gap-2">
-            <a href="catalogues/2026-evaton-aussie-rules.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              Evaton Aussie Rules 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
-            <a href="catalogues/2026-tcd-aussie-rules.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              TCD Aussie Rules 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
+          <div class="catalogue-body">
+            <h3>AFL Catalogue</h3>
+            <div class="flex flex-col gap-2">
+              <a href="catalogues/2026-evaton-aussie-rules.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                Evaton Aussie Rules 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+              <a href="catalogues/2026-tcd-aussie-rules.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                TCD Aussie Rules 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Basketball -->
-        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
-              <!-- Basketball: circle with curved seam lines -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
-                <circle cx="12" cy="12" r="9" stroke="#2ab5c6" stroke-width="1.5"/>
-                <path stroke-linecap="round" d="M12 3c2.5 2 4 5 4 9s-1.5 7-4 9"/>
-                <path stroke-linecap="round" d="M12 3c-2.5 2-4 5-4 9s1.5 7 4 9"/>
-                <path stroke-linecap="round" d="M3 12h18"/>
-              </svg>
-            </div>
-            <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Basketball</span>
-              <h3 class="text-xl font-bold text-brand-blue mt-0.5">Basketball Catalogue</h3>
-            </div>
+        <div class="catalogue-card">
+          <div class="catalogue-banner" style="background:linear-gradient(135deg,#0f3057,#2ab5c6);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5">
+              <circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.5"/>
+              <path stroke-linecap="round" d="M12 3c2.5 2 4 5 4 9s-1.5 7-4 9"/>
+              <path stroke-linecap="round" d="M12 3c-2.5 2-4 5-4 9s1.5 7 4 9"/>
+              <path stroke-linecap="round" d="M3 12h18"/>
+            </svg>
+            <span style="color:rgba(255,255,255,0.85);font-size:0.875rem;font-weight:600;">Basketball</span>
           </div>
-          <div class="flex flex-col gap-2">
-            <a href="catalogues/2026-evaton-basketball.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              Evaton Basketball 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
+          <div class="catalogue-body">
+            <h3>Basketball Catalogue</h3>
+            <div class="flex flex-col gap-2">
+              <a href="catalogues/2026-evaton-basketball.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                Evaton Basketball 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Corporate Awards -->
-        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
-              <!-- Ribbon/award rosette -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
-                <circle cx="12" cy="9" r="5" stroke="#2ab5c6" stroke-width="1.5"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 14l-2 7 5-3 5 3-2-7"/>
-              </svg>
-            </div>
-            <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Corporate</span>
-              <h3 class="text-xl font-bold text-brand-blue mt-0.5">Corporate Awards</h3>
-            </div>
+        <div class="catalogue-card">
+          <div class="catalogue-banner" style="background:linear-gradient(135deg,#1874AA,#7DD9EC);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5">
+              <circle cx="12" cy="9" r="5" stroke="#fff" stroke-width="1.5"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 14l-2 7 5-3 5 3-2-7"/>
+            </svg>
+            <span style="color:rgba(255,255,255,0.85);font-size:0.875rem;font-weight:600;">Corporate</span>
           </div>
-          <div class="flex flex-col gap-2">
-            <a href="catalogues/2026-evaton-corporate.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              Evaton Corporate 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
-            <a href="catalogues/2026-tcd-corporate.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              TCD Corporate 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
+          <div class="catalogue-body">
+            <h3>Corporate Awards</h3>
+            <div class="flex flex-col gap-2">
+              <a href="catalogues/2026-evaton-corporate.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                Evaton Corporate 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+              <a href="catalogues/2026-tcd-corporate.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                TCD Corporate 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Dance -->
-        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
-              <!-- Figure in motion -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
-                <circle cx="13" cy="4" r="1.5" stroke="#2ab5c6" stroke-width="1.5"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M10 8l3 2 2-3M13 10l1 4-2.5 2.5M13 10l-2 3-2.5 1"/>
-              </svg>
-            </div>
-            <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Dance</span>
-              <h3 class="text-xl font-bold text-brand-blue mt-0.5">Dance Catalogue</h3>
-            </div>
+        <div class="catalogue-card">
+          <div class="catalogue-banner" style="background:linear-gradient(135deg,#0f3057,#1a4d7c);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5">
+              <circle cx="13" cy="4" r="1.5" stroke="#fff" stroke-width="1.5"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10 8l3 2 2-3M13 10l1 4-2.5 2.5M13 10l-2 3-2.5 1"/>
+            </svg>
+            <span style="color:rgba(255,255,255,0.85);font-size:0.875rem;font-weight:600;">Dance</span>
           </div>
-          <div class="flex flex-col gap-2">
-            <a href="catalogues/2026-evaton-dance.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              Evaton Dance 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
-            <a href="catalogues/2026-tcd-dance.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              TCD Dance 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
+          <div class="catalogue-body">
+            <h3>Dance Catalogue</h3>
+            <div class="flex flex-col gap-2">
+              <a href="catalogues/2026-evaton-dance.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                Evaton Dance 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+              <a href="catalogues/2026-tcd-dance.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                TCD Dance 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Football -->
-        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
-              <!-- Soccer ball: circle with pentagon patch pattern -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
-                <circle cx="12" cy="12" r="9" stroke="#2ab5c6" stroke-width="1.5"/>
-                <polygon points="12,6 14.5,8.5 13.5,11.5 10.5,11.5 9.5,8.5" stroke="#2ab5c6" stroke-width="1.2" stroke-linejoin="round"/>
-                <line x1="9.5" y1="8.5" x2="4.5" y2="9.5" stroke="#2ab5c6" stroke-width="1.2"/>
-                <line x1="14.5" y1="8.5" x2="18.5" y2="7" stroke="#2ab5c6" stroke-width="1.2"/>
-                <line x1="10.5" y1="11.5" x2="8" y2="15" stroke="#2ab5c6" stroke-width="1.2"/>
-                <line x1="13.5" y1="11.5" x2="16" y2="15" stroke="#2ab5c6" stroke-width="1.2"/>
-              </svg>
-            </div>
-            <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Football</span>
-              <h3 class="text-xl font-bold text-brand-blue mt-0.5">Football Catalogue</h3>
-            </div>
+        <div class="catalogue-card">
+          <div class="catalogue-banner" style="background:linear-gradient(135deg,#1a4d7c,#0f3057);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5">
+              <circle cx="12" cy="12" r="9" stroke="#fff" stroke-width="1.5"/>
+              <polygon points="12,6 14.5,8.5 13.5,11.5 10.5,11.5 9.5,8.5" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/>
+              <line x1="9.5" y1="8.5" x2="4.5" y2="9.5" stroke="#fff" stroke-width="1.2"/>
+              <line x1="14.5" y1="8.5" x2="18.5" y2="7" stroke="#fff" stroke-width="1.2"/>
+              <line x1="10.5" y1="11.5" x2="8" y2="15" stroke="#fff" stroke-width="1.2"/>
+              <line x1="13.5" y1="11.5" x2="16" y2="15" stroke="#fff" stroke-width="1.2"/>
+            </svg>
+            <span style="color:rgba(255,255,255,0.85);font-size:0.875rem;font-weight:600;">Football</span>
           </div>
-          <div class="flex flex-col gap-2">
-            <a href="catalogues/2026-evaton-football.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              Evaton Football 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
-            <a href="catalogues/2026-tcd-football.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              TCD Football 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
+          <div class="catalogue-body">
+            <h3>Football Catalogue</h3>
+            <div class="flex flex-col gap-2">
+              <a href="catalogues/2026-evaton-football.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                Evaton Football 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+              <a href="catalogues/2026-tcd-football.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                TCD Football 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Netball -->
-        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
-              <!-- Netball: ball with ring/hoop above -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
-                <circle cx="12" cy="14" r="6" stroke="#2ab5c6" stroke-width="1.5"/>
-                <ellipse cx="12" cy="6" rx="4" ry="2" stroke="#2ab5c6" stroke-width="1.5"/>
-                <line x1="12" y1="8" x2="12" y2="8.5" stroke="#2ab5c6" stroke-width="1.5"/>
-              </svg>
-            </div>
-            <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Netball</span>
-              <h3 class="text-xl font-bold text-brand-blue mt-0.5">Netball Catalogue</h3>
-            </div>
+        <div class="catalogue-card">
+          <div class="catalogue-banner" style="background:linear-gradient(135deg,#2ab5c6,#7DD9EC);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5">
+              <circle cx="12" cy="14" r="6" stroke="#fff" stroke-width="1.5"/>
+              <ellipse cx="12" cy="6" rx="4" ry="2" stroke="#fff" stroke-width="1.5"/>
+              <line x1="12" y1="8" x2="12" y2="8.5" stroke="#fff" stroke-width="1.5"/>
+            </svg>
+            <span style="color:rgba(255,255,255,0.85);font-size:0.875rem;font-weight:600;">Netball</span>
           </div>
-          <div class="flex flex-col gap-2">
-            <a href="catalogues/2026-evaton-netball.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              Evaton Netball 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
-            <a href="catalogues/2026-tcd-netball.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              TCD Netball 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
+          <div class="catalogue-body">
+            <h3>Netball Catalogue</h3>
+            <div class="flex flex-col gap-2">
+              <a href="catalogues/2026-evaton-netball.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                Evaton Netball 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+              <a href="catalogues/2026-tcd-netball.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                TCD Netball 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Rugby -->
-        <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:linear-gradient(135deg,#e8f8fa,#d0f0f7);">
-              <!-- Rugby ball ellipse with seam lines -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
-                <ellipse cx="12" cy="12" rx="9" ry="6" stroke="#2ab5c6" stroke-width="1.5"/>
-                <path stroke-linecap="round" d="M12 6v12"/>
-                <path stroke-linecap="round" d="M7.5 9.5h9"/>
-                <path stroke-linecap="round" d="M7.5 14.5h9"/>
-              </svg>
-            </div>
-            <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:#e0f6f9;color:#2ab5c6;">Rugby</span>
-              <h3 class="text-xl font-bold text-brand-blue mt-0.5">Rugby Catalogue</h3>
-            </div>
+        <div class="catalogue-card">
+          <div class="catalogue-banner" style="background:linear-gradient(135deg,#0f3057,#2ab5c6);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5">
+              <ellipse cx="12" cy="12" rx="9" ry="6" stroke="#fff" stroke-width="1.5"/>
+              <path stroke-linecap="round" d="M12 6v12"/>
+              <path stroke-linecap="round" d="M7.5 9.5h9"/>
+              <path stroke-linecap="round" d="M7.5 14.5h9"/>
+            </svg>
+            <span style="color:rgba(255,255,255,0.85);font-size:0.875rem;font-weight:600;">Rugby</span>
           </div>
-          <div class="flex flex-col gap-2">
-            <a href="catalogues/2026-evaton-rugby.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              Evaton Rugby 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
-            <a href="catalogues/2026-tcd-rugby.pdf" target="_blank" rel="noopener" class="catalogue-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
-              TCD Rugby 2026
-              <span class="pdf-pill">PDF</span>
-            </a>
+          <div class="catalogue-body">
+            <h3>Rugby Catalogue</h3>
+            <div class="flex flex-col gap-2">
+              <a href="catalogues/2026-evaton-rugby.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                Evaton Rugby 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+              <a href="catalogues/2026-tcd-rugby.pdf" target="_blank" rel="noopener" class="catalogue-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg>
+                TCD Rugby 2026
+                <span class="pdf-pill">PDF</span>
+              </a>
+            </div>
           </div>
         </div>
 
         <!-- Can't Find Your Sport? -->
-        <div class="catalogue-card rounded-2xl p-7 flex flex-col gap-4" style="background:linear-gradient(135deg,#1a4d7c,#0f3057);border:1px solid #0f3057;">
-          <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(42,181,198,0.18);">
-              <!-- Trophy with question mark -->
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 3h6M7 3a2 2 0 00-2 2v1a5 5 0 005 5h4a5 5 0 005-5V5a2 2 0 00-2-2M9 11v3m6-3v3M7 20h10M9 14h6"/>
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5c.5-.8 1.5-.8 1.5 0 0 .6-.7.9-1 1.2-.2.2-.5.5-.5.8"/>
-                <circle cx="12" cy="10.5" r="0.3" fill="#2ab5c6"/>
-              </svg>
-            </div>
-            <div>
-              <span class="text-xs font-semibold px-2 py-0.5 rounded-full" style="background:rgba(42,181,198,0.2);color:#7dd8e8;">All Sports</span>
-              <h3 class="text-xl font-bold text-white mt-0.5">Can't Find Your Sport?</h3>
-            </div>
+        <div class="catalogue-card">
+          <div class="catalogue-banner" style="background:linear-gradient(135deg,#1a4d7c,#0f3057);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 3h6M7 3a2 2 0 00-2 2v1a5 5 0 005 5h4a5 5 0 005-5V5a2 2 0 00-2-2M9 11v3m6-3v3M7 20h10M9 14h6"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5c.5-.8 1.5-.8 1.5 0 0 .6-.7.9-1 1.2-.2.2-.5.5-.5.8"/>
+              <circle cx="12" cy="10.5" r="0.3" fill="#fff"/>
+            </svg>
+            <span style="color:rgba(255,255,255,0.85);font-size:0.875rem;font-weight:600;">All Sports</span>
           </div>
-          <p class="text-sm -mt-1" style="color:rgba(255,255,255,0.72);">We cater for many sports beyond these catalogues — get in touch and we'll find the right award for you.</p>
-          <div class="flex flex-col gap-2 mt-auto">
-            <a href="contact.html" class="catalogue-btn-cyan">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              Contact Us for Help
-            </a>
+          <div class="catalogue-body">
+            <h3>Can't Find Your Sport?</h3>
+            <p style="font-size:0.875rem;color:#5a7a96;margin:0;">We cater for many sports beyond these catalogues — get in touch and we'll find the right award for you.</p>
+            <div class="flex flex-col gap-2 mt-auto">
+              <a href="contact.html" class="catalogue-btn-cyan">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                Contact Us for Help
+              </a>
+            </div>
           </div>
         </div>
 
