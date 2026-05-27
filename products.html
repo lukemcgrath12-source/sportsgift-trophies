@@ -66,7 +66,11 @@
 
 
   <style>
+    #catalogue-grid::-webkit-scrollbar { display:none; }
     .catalogue-card {
+      width: 320px;
+      flex-shrink: 0;
+      scroll-snap-align: start;
       border-top: 4px solid #2ab5c6 !important;
       padding-top: 0 !important;
       box-shadow: 0 4px 20px rgba(26,77,124,0.10) !important;
@@ -116,16 +120,24 @@
   </style>
 
   <!-- CATALOGUES -->
-  <section class="fade-section py-16 px-4" style="background:linear-gradient(135deg,#f0f7ff 0%,#e8f4f8 100%);border-top:4px solid #2ab5c6;">
+  <section class="fade-section py-16 px-4" style="background:#f4f7fb;">
     <div class="max-w-6xl mx-auto">
 
       <div class="text-center mb-14">
+        <div class="hidden md:flex items-center justify-end gap-2 mb-4">
+          <button id="cat-prev" aria-label="Previous" onclick="document.getElementById('catalogue-grid').scrollBy({left:-344,behavior:'smooth'})" style="width:40px;height:40px;border-radius:50%;background:#2ab5c6;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.18s;" onmouseover="this.style.background='#1e9db0'" onmouseout="this.style.background='#2ab5c6'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button id="cat-next" aria-label="Next" onclick="document.getElementById('catalogue-grid').scrollBy({left:344,behavior:'smooth'})" style="width:40px;height:40px;border-radius:50%;background:#2ab5c6;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.18s;" onmouseover="this.style.background='#1e9db0'" onmouseout="this.style.background='#2ab5c6'">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
         <h2 class="text-4xl font-bold text-brand-blue mb-3">Browse Our 2026 Catalogues</h2>
         <div style="width:40px;height:3px;background:#2ab5c6;margin:12px auto 0;border-radius:2px;"></div>
         <p class="text-gray-500 text-base max-w-xl mx-auto mt-4">Download our full supplier catalogues to explore the complete range. We stock products from Evaton and TCD — two of Australia's leading trophy and award suppliers.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="catalogue-grid">
+      <div id="catalogue-grid" style="display:flex;overflow-x:auto;gap:24px;padding:16px 8px 24px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;">
 
         <!-- All Sports / General -->
         <div class="catalogue-card bg-white rounded-2xl p-7 flex flex-col gap-4" style="border:1px solid #d8eaf2;">
