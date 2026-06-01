@@ -25,17 +25,23 @@ function initIntroOverlay() {
 }
 
 function initHeroCarousel() {
-  const slides = document.querySelectorAll('.hero-slide');
+  const slides = document.querySelectorAll('.hero-img-slide');
+  const dots = document.querySelectorAll('.hero-dot');
   if (!slides.length) return;
 
   let activeIndex = 0;
-  slides[activeIndex].classList.add('active');
 
-  setInterval(() => {
+  function goTo(index) {
     slides[activeIndex].classList.remove('active');
-    activeIndex = (activeIndex + 1) % slides.length;
+    dots[activeIndex].classList.remove('active');
+    activeIndex = index;
     slides[activeIndex].classList.add('active');
-  }, 4000);
+    dots[activeIndex].classList.add('active');
+  }
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  setInterval(() => goTo((activeIndex + 1) % slides.length), 3500);
 }
 
 function initScrollReveal() {
