@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="SportsGift Trophies">
+  <!-- Deep blue circle background -->
+  <circle cx="60" cy="60" r="58" fill="#0D4E7A"/>
+
+  <!-- Cyan arc swoosh at bottom of circle -->
+  <path d="M 17 78 Q 28 108 60 115 Q 92 108 103 78" fill="none" stroke="#2BBCD6" stroke-width="9" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- Trophy base plaque (cyan) -->
+  <rect x="43" y="88" width="34" height="9" rx="2.5" fill="#7DD9EC"/>
+
+  <!-- Trophy stem -->
+  <rect x="54" y="79" width="12" height="11" rx="1" fill="white"/>
+
+  <!-- Trophy cup body -->
+  <path d="M 42 43 L 78 43 C 79 50 81 57 81 63 C 81 73 71 79 60 80 C 49 79 39 73 39 63 C 39 57 41 50 42 43 Z" fill="white"/>
+
+  <!-- Left handle -->
+  <path d="M 44 52 C 30 52 27 61 29 68 C 31 74 37 76 42 76" fill="none" stroke="white" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Right handle -->
+  <path d="M 76 52 C 90 52 93 61 91 68 C 89 74 83 76 78 76" fill="none" stroke="white" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Trophy top rim -->
+  <rect x="38" y="38" width="44" height="7" rx="3.5" fill="white"/>
+
+  <!-- Leaf / floral crown — petals radiating from centre of rim -->
+  <g transform="translate(60,38)">
+    <!-- Centre petal -->
+    <ellipse cx="0" cy="-10" rx="3.5" ry="10" fill="white"/>
+    <!-- Inner left & right petals -->
+    <ellipse cx="0" cy="-9" rx="3" ry="9" fill="white" transform="rotate(-24 0 0)"/>
+    <ellipse cx="0" cy="-9" rx="3" ry="9" fill="white" transform="rotate(24 0 0)"/>
+    <!-- Mid left & right petals -->
+    <ellipse cx="0" cy="-8" rx="2.5" ry="8" fill="white" transform="rotate(-46 0 0)"/>
+    <ellipse cx="0" cy="-8" rx="2.5" ry="8" fill="white" transform="rotate(46 0 0)"/>
+    <!-- Outer left & right petals -->
+    <ellipse cx="0" cy="-7" rx="2" ry="7" fill="white" transform="rotate(-66 0 0)"/>
+    <ellipse cx="0" cy="-7" rx="2" ry="7" fill="white" transform="rotate(66 0 0)"/>
+  </g>
+
+  <!-- Subtle cup ridge detail (gives depth to the white cup) -->
+  <path d="M 53 50 C 51 56 50 60 50 64 C 50 69 52 73 55 76" fill="none" stroke="#0D4E7A" stroke-width="1.2" opacity="0.15" stroke-linecap="round"/>
+</svg>
