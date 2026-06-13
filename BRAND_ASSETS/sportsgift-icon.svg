@@ -1,43 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="SportsGift Trophies">
-  <!-- Deep blue circle background -->
-  <circle cx="60" cy="60" r="58" fill="#0D4E7A"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="SportsGift Trophies">
+  <defs>
+    <radialGradient id="bg" cx="42%" cy="38%" r="62%">
+      <stop offset="0%"  stop-color="#2BBCD6"/>
+      <stop offset="100%" stop-color="#0A3D61"/>
+    </radialGradient>
+    <!-- Clip everything to the circle -->
+    <clipPath id="circle-clip">
+      <circle cx="50" cy="50" r="49"/>
+    </clipPath>
+  </defs>
 
-  <!-- Cyan arc swoosh at bottom of circle -->
-  <path d="M 17 78 Q 28 108 60 115 Q 92 108 103 78" fill="none" stroke="#2BBCD6" stroke-width="9" stroke-linecap="round" opacity="0.9"/>
+  <!-- Gradient circle background -->
+  <circle cx="50" cy="50" r="49" fill="url(#bg)"/>
 
-  <!-- Trophy base plaque (cyan) -->
-  <rect x="43" y="88" width="34" height="9" rx="2.5" fill="#7DD9EC"/>
+  <!-- Everything below clipped to circle -->
+  <g clip-path="url(#circle-clip)" fill="white">
 
-  <!-- Trophy stem -->
-  <rect x="54" y="79" width="12" height="11" rx="1" fill="white"/>
-
-  <!-- Trophy cup body -->
-  <path d="M 42 43 L 78 43 C 79 50 81 57 81 63 C 81 73 71 79 60 80 C 49 79 39 73 39 63 C 39 57 41 50 42 43 Z" fill="white"/>
-
-  <!-- Left handle -->
-  <path d="M 44 52 C 30 52 27 61 29 68 C 31 74 37 76 42 76" fill="none" stroke="white" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- Right handle -->
-  <path d="M 76 52 C 90 52 93 61 91 68 C 89 74 83 76 78 76" fill="none" stroke="white" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-  <!-- Trophy top rim -->
-  <rect x="38" y="38" width="44" height="7" rx="3.5" fill="white"/>
-
-  <!-- Leaf / floral crown — petals radiating from centre of rim -->
-  <g transform="translate(60,38)">
+    <!-- Crown / leaf burst — solid filled fan of petals -->
     <!-- Centre petal -->
-    <ellipse cx="0" cy="-10" rx="3.5" ry="10" fill="white"/>
-    <!-- Inner left & right petals -->
-    <ellipse cx="0" cy="-9" rx="3" ry="9" fill="white" transform="rotate(-24 0 0)"/>
-    <ellipse cx="0" cy="-9" rx="3" ry="9" fill="white" transform="rotate(24 0 0)"/>
-    <!-- Mid left & right petals -->
-    <ellipse cx="0" cy="-8" rx="2.5" ry="8" fill="white" transform="rotate(-46 0 0)"/>
-    <ellipse cx="0" cy="-8" rx="2.5" ry="8" fill="white" transform="rotate(46 0 0)"/>
-    <!-- Outer left & right petals -->
-    <ellipse cx="0" cy="-7" rx="2" ry="7" fill="white" transform="rotate(-66 0 0)"/>
-    <ellipse cx="0" cy="-7" rx="2" ry="7" fill="white" transform="rotate(66 0 0)"/>
-  </g>
+    <ellipse cx="50" cy="18" rx="3" ry="9"/>
+    <!-- Inner left -->
+    <ellipse cx="50" cy="18" rx="2.6" ry="8.5" transform="rotate(-22 50 28)"/>
+    <!-- Inner right -->
+    <ellipse cx="50" cy="18" rx="2.6" ry="8.5" transform="rotate(22 50 28)"/>
+    <!-- Mid left -->
+    <ellipse cx="50" cy="19" rx="2.2" ry="7.5" transform="rotate(-42 50 28)"/>
+    <!-- Mid right -->
+    <ellipse cx="50" cy="19" rx="2.2" ry="7.5" transform="rotate(42 50 28)"/>
+    <!-- Outer left -->
+    <ellipse cx="50" cy="20" rx="1.8" ry="6.5" transform="rotate(-60 50 28)"/>
+    <!-- Outer right -->
+    <ellipse cx="50" cy="20" rx="1.8" ry="6.5" transform="rotate(60 50 28)"/>
 
-  <!-- Subtle cup ridge detail (gives depth to the white cup) -->
-  <path d="M 53 50 C 51 56 50 60 50 64 C 50 69 52 73 55 76" fill="none" stroke="#0D4E7A" stroke-width="1.2" opacity="0.15" stroke-linecap="round"/>
+    <!-- Trophy cup rim bar -->
+    <rect x="31" y="27" width="38" height="5.5" rx="2.75"/>
+
+    <!-- Trophy cup bowl — solid filled shape -->
+    <path d="M34 32.5
+             C33 37 32 41 32 45
+             C32 52 40 57.5 50 58
+             C60 57.5 68 52 68 45
+             C68 41 67 37 66 32.5
+             Z"/>
+
+    <!-- Left handle — solid filled arch -->
+    <path d="M35 38
+             C24 38 21 44 21 48
+             C21 53 25 56 31 57
+             L33 54
+             C29 53 27 51 27 48
+             C27 45 29 42 35 41
+             Z"/>
+
+    <!-- Right handle — solid filled arch -->
+    <path d="M65 38
+             C76 38 79 44 79 48
+             C79 53 75 56 69 57
+             L67 54
+             C71 53 73 51 73 48
+             C73 45 71 42 65 41
+             Z"/>
+
+    <!-- Stem -->
+    <rect x="45" y="58" width="10" height="9" rx="1"/>
+
+    <!-- Upper base bar -->
+    <rect x="37" y="67" width="26" height="5" rx="2"/>
+
+    <!-- Lower base bar -->
+    <rect x="33" y="72" width="34" height="6" rx="2.5"/>
+
+  </g>
 </svg>
