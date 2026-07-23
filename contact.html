@@ -5,507 +5,374 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | SportsGift Trophies</title>
   <meta name="description" content="Contact SportsGift Trophies in Sydney for enquiries about trophies, medals, custom engraving and bulk orders." />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { brand: { blue: '#1a4d7c', cyan: '#2ab5c6' } },
-          fontFamily: { heading: ['Poppins', 'sans-serif'], body: ['Nunito', 'sans-serif'] },
-        },
-      },
-    }
-  </script>
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
-  <style>body { font-family: 'Nunito', sans-serif; } h1,h2,h3,h4,h5,h6 { font-family: 'Poppins', sans-serif; }</style>
-  <link rel="stylesheet" href="assets/css/site.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   <script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"8ca4f19dfa3ad2d1e67380037600fe47"})});</script>
-</head>
-<body class="bg-white text-gray-800">
-
-  <!-- NAV -->
-  <header class="bg-brand-blue shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="index.html">
-        <img src="BRAND_ASSETS/sportsgift-icon.svg" alt="SportsGift Trophies" height="60" style="height:60px;width:auto;display:block;">
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-blue-100">
-        <a data-nav href="index.html" class="hover:text-brand-cyan transition-colors">Home</a>
-        <a data-nav href="products.html" class="hover:text-brand-cyan transition-colors">Products</a>
-        <a data-nav href="engraving.html" class="hover:text-brand-cyan transition-colors">Engraving</a>
-        <a data-nav href="custom-orders.html" class="hover:text-brand-cyan transition-colors">Custom Orders</a>
-        <a data-nav href="gallery.html" class="hover:text-brand-cyan transition-colors">Gallery</a>
-        <a data-nav href="about.html" class="hover:text-brand-cyan transition-colors">About</a>
-        <a href="contact.html" class="bg-brand-cyan text-white px-4 py-2 rounded-full hover:bg-cyan-500 transition-colors">Contact Us</a>
-      </nav>
-      <button id="menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-brand-blue border-t border-blue-700 px-4 pb-4" style="display:none">
-      <a data-nav href="index.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Home</a>
-      <a data-nav href="products.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Products</a>
-      <a data-nav href="engraving.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Engraving</a>
-      <a data-nav href="custom-orders.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Custom Orders</a>
-      <a data-nav href="gallery.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">Gallery</a>
-      <a data-nav href="about.html" class="block py-2 text-blue-100 hover:text-brand-cyan font-semibold">About</a>
-      <a href="contact.html" class="block mt-2 bg-brand-cyan text-white text-center px-4 py-2 rounded-full font-semibold hover:bg-cyan-500 transition-colors">Contact Us</a>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="fade-section bg-gradient-to-br from-brand-blue to-[#0f3057] text-white py-16 px-4 text-center">
-    <div class="max-w-3xl mx-auto">
-      <h1 class="text-4xl font-bold mb-3">Contact Us</h1>
-      <p class="text-blue-100 text-lg">We'd love to hear from you. Get in touch for a quote or general enquiry.</p>
-    </div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section class="fade-section py-16 px-4" style="background:#f4f7fb;">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
-
-      <!-- Form card -->
-      <div class="bg-white rounded-2xl p-6 sm:p-8" style="box-shadow:0 2px 12px rgba(26,77,124,0.08);border:1px solid #e8edf3;">
-        <h2 class="text-2xl font-bold text-brand-blue mb-2">Get a Quote</h2>
-        <p class="text-sm text-gray-500 mb-6">Fill in the details below and we'll get back to you within 1 business day.</p>
-
-        <form id="quote-form" method="POST" class="space-y-5">
-          <!-- Web3Forms hidden fields -->
-          <input type="hidden" name="access_key" value="283d11cd-6ec5-41d0-a93c-303af0ec4f27" />
-          <input type="hidden" name="subject" value="New Quote Request – SportsGift Trophies" />
-          <input type="hidden" name="redirect" value="" />
-
-          <!-- Row 1: Name + Email -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1">Full Name <span class="text-red-400">*</span></label>
-              <input type="text" name="name" class="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" style="border:1.5px solid #e2e8f0;" placeholder="Jane Smith" required />
-            </div>
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1">Email Address <span class="text-red-400">*</span></label>
-              <input type="email" name="email" class="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" style="border:1.5px solid #e2e8f0;" placeholder="you@example.com" required />
-            </div>
-          </div>
-
-          <!-- Row 2: Phone + Organisation -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
-              <input type="tel" name="phone" class="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" style="border:1.5px solid #e2e8f0;" placeholder="0400 000 000" />
-            </div>
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1">Organisation / Club Name</label>
-              <input type="text" name="organisation" class="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" style="border:1.5px solid #e2e8f0;" placeholder="e.g. Gymea FC" />
-            </div>
-          </div>
-
-          <!-- Row 3: Sport + Quantity -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1">Sport / Category</label>
-              <select name="sport" class="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" style="border:1.5px solid #e2e8f0;color:#374151;">
-                <option value="">Select…</option>
-                <option>Football</option>
-                <option>Cricket</option>
-                <option>Netball</option>
-                <option>Swimming</option>
-                <option>Athletics</option>
-                <option>Tennis</option>
-                <option>Golf</option>
-                <option>Multi-sport</option>
-                <option>School</option>
-                <option>Corporate</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1">Approximate Quantity</label>
-              <select name="quantity" class="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" style="border:1.5px solid #e2e8f0;color:#374151;">
-                <option value="">Select…</option>
-                <option>1–10</option>
-                <option>11–25</option>
-                <option>26–50</option>
-                <option>51–100</option>
-                <option>100+</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Row 4: Date + Product Interest -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1">Event / Presentation Date</label>
-              <input type="date" name="event_date" class="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" style="border:1.5px solid #e2e8f0;color:#374151;" />
-            </div>
-            <div>
-              <label class="block text-sm font-semibold text-gray-700 mb-1">Product Interest</label>
-              <select name="product_interest" class="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" style="border:1.5px solid #e2e8f0;color:#374151;">
-                <option value="">Select…</option>
-                <option>Trophies</option>
-                <option>Medals</option>
-                <option>Plaques &amp; Shields</option>
-                <option>Perpetual Awards</option>
-                <option>Drinkware</option>
-                <option>Name Badges</option>
-                <option>Not sure yet</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Row 5: Message (full width) -->
-          <div>
-            <label class="block text-sm font-semibold text-gray-700 mb-1">Message / Additional Details</label>
-            <textarea name="message" rows="5" class="w-full rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-brand-cyan" style="border:1.5px solid #e2e8f0;resize:vertical;" placeholder="Tell us more about your order, deadlines, or anything else we should know…"></textarea>
-          </div>
-
-          <!-- Submit (full width) -->
-          <button type="submit" id="quote-submit" class="w-full btn-anim text-white font-bold rounded-lg py-3.5 text-base transition-colors" style="background:#0D4E7A;font-family:'Poppins',sans-serif;">
-            <span id="quote-submit-label">Send Quote Request</span>
-          </button>
-        </form>
-
-        <!-- Thank you state (hidden until successful submit) -->
-        <div id="quote-thankyou" style="display:none;" class="flex flex-col items-center justify-center text-center py-10 px-4">
-          <div class="mb-5 flex items-center justify-center w-16 h-16 rounded-full" style="background:#e8f8fa;">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="#2BBCD6" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-            </svg>
-          </div>
-          <h3 style="font-family:'Poppins',sans-serif;font-size:1.5rem;font-weight:700;color:#0D4E7A;" class="mb-3">Thanks, we'll be in touch!</h3>
-          <p class="text-gray-500 text-sm max-w-sm" style="line-height:1.7;">
-            We've received your quote request and will get back to you within 1 business day. If it's urgent, call us on <a href="tel:0295401000" class="font-semibold" style="color:#2BBCD6;">(02) 9540 1000</a>.
-          </p>
-        </div>
-      </div>
-
-      <!-- Info column -->
-      <div class="flex flex-col gap-6 h-full">
-
-        <!-- Contact details card -->
-        <div class="bg-white rounded-2xl p-8" style="box-shadow:0 2px 12px rgba(26,77,124,0.08);border:1px solid #e8edf3;">
-          <h2 class="text-2xl font-bold text-brand-blue mb-6">Get in Touch</h2>
-          <div class="space-y-6">
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#e8f8fa;">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-              </div>
-              <div>
-                <p class="font-semibold text-brand-blue mb-0.5">Location</p>
-                <p class="text-gray-500 text-sm">79 Gymea Bay Rd<br/>Gymea NSW 2227</p>
-                <p class="text-xs mt-2 px-3 py-2 rounded-lg" style="background:rgba(43,188,214,0.08);border:1px solid rgba(43,188,214,0.2);color:#5a7a96;">We are located in the <strong style="color:#0D4E7A;">back of The Gymea Lily shopping centre</strong>. We are <em>not</em> located in the Vinnies building.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#e8f8fa;">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-                </svg>
-              </div>
-              <div>
-                <p class="font-semibold text-brand-blue mb-0.5">Phone</p>
-                <p class="text-gray-500 text-sm"><a href="tel:0295401000" class="hover:text-brand-cyan transition-colors">(02) 9540 1000</a></p>
-              </div>
-            </div>
-            <div class="flex items-start gap-4">
-              <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background:#e8f8fa;">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="#2ab5c6" stroke-width="2">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                </svg>
-              </div>
-              <div>
-                <p class="font-semibold text-brand-blue mb-0.5">Email</p>
-                <p class="text-gray-500 text-sm"><a href="mailto:sales@sportsgift.com.au" class="hover:text-brand-cyan transition-colors">sales@sportsgift.com.au</a><br/>We aim to respond within 1 business day.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Business hours card -->
-        <div class="bg-white rounded-2xl p-8" style="box-shadow:0 2px 12px rgba(26,77,124,0.08);border:1px solid #e8edf3;">
-          <h3 class="font-bold text-brand-blue text-lg mb-4">Business Hours</h3>
-          <table class="w-full text-sm text-gray-500">
-            <tr class="border-b border-gray-100"><td class="py-2 font-semibold text-gray-700">Monday to Friday:</td><td class="py-2">9:00am to 5:00pm</td></tr>
-            <tr class="border-b border-gray-100"><td class="py-2 font-semibold text-gray-700">Saturday:</td><td class="py-2">9:00am to 1:00pm</td></tr>
-            <tr><td class="py-2 font-semibold text-gray-700">Sunday:</td><td class="py-2 text-gray-400">Closed</td></tr>
-          </table>
-        </div>
-
-        <!-- Map -->
-        <div class="rounded-2xl overflow-hidden flex-1" style="min-height:350px;box-shadow:0 2px 12px rgba(26,77,124,0.08);border:1px solid #e8edf3;">
-          <iframe
-            title="SportsGift Trophies location map"
-            src="https://maps.google.com/maps?q=79+Gymea+Bay+Rd+Gymea+NSW+2227+Australia&output=embed"
-            width="100%"
-            height="100%"
-            style="border:0;display:block;min-height:350px;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-brand-blue text-blue-100 pt-12 pb-6 px-4">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-      <div>
-        <img src="BRAND_ASSETS/sportsgift-icon.svg" alt="SportsGift Trophies" style="height:44px;width:auto;">
-        <p class="mt-3 text-sm text-blue-200">Sydney's trusted source for trophies, medals, awards and custom engraving across the Sutherland Shire.</p>
-      </div>
-      <div>
-        <h4 class="text-white font-semibold mb-3">Products</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="products.html" class="hover:text-brand-cyan transition-colors">All Products</a></li>
-          <li><a href="engraving.html" class="hover:text-brand-cyan transition-colors">Engraving Services</a></li>
-          <li><a href="custom-orders.html" class="hover:text-brand-cyan transition-colors">Custom Orders</a></li>
-          <li><a href="gallery.html" class="hover:text-brand-cyan transition-colors">Gallery</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-semibold mb-3">Company</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="about.html" class="hover:text-brand-cyan transition-colors">About Us</a></li>
-          <li><a href="contact.html" class="hover:text-brand-cyan transition-colors">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-semibold mb-3">Contact</h4>
-        <ul class="space-y-2 text-sm text-blue-200">
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 mr-2" fill="#2ab5c6" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm0-13c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5z"/></svg> 79 Gymea Bay Rd, Gymea NSW 2227
-            <span class="block text-xs text-blue-400 mt-1 ml-6">In the back of The Gymea Lily shopping centre — not the Vinnies building.</span>
-          </li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 mr-2" fill="#2ab5c6" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg> <a href="tel:0295401000">(02) 9540 1000</a></li>
-          <li><svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 mr-2" fill="#2ab5c6" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> <a href="mailto:sales@sportsgift.com.au">sales@sportsgift.com.au</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="border-t border-blue-700 pt-6 text-center text-sm text-blue-300">
-      &copy; 2026 SportsGift Trophies. All rights reserved. &nbsp;|&nbsp; ABN: 96 643 687 843
-      <span class="block mt-1 text-blue-400 text-xs">Website by <a href="https://www.latitude-marketing.com/" target="_blank" rel="noopener" class="hover:text-brand-cyan transition-colors">Latitude Marketing</a></span>
-    </div>
-  </footer>
-
-  <script src="assets/js/nav.js"></script>
-  <script src="assets/js/site.js"></script>
-
-  <!-- ENQUIRY RECEIVED MODAL -->
-  <div id="enquiry-overlay" style="
-    position:fixed;inset:0;z-index:9000;
-    background:rgba(0,0,0,0.85);
-    backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
-    display:flex;align-items:center;justify-content:center;padding:1rem;
-    opacity:0;pointer-events:none;
-    transition:opacity 0.3s ease;
-  ">
-    <div id="enquiry-card" style="
-      background:#0f1f35;
-      border:1px solid rgba(42,181,198,0.35);
-      border-radius:16px;
-      max-width:620px;width:100%;
-      padding:3rem;
-      position:relative;
-      overflow:hidden;
-      transform:translateY(20px) scale(0.97);
-      transition:transform 0.5s cubic-bezier(0.34,1.56,0.64,1);
-    ">
-      <!-- Corner glow -->
-      <div style="
-        content:'';position:absolute;top:-60px;right:-60px;
-        width:180px;height:180px;
-        background:radial-gradient(circle,rgba(42,181,198,0.18) 0%,transparent 70%);
-        pointer-events:none;
-      "></div>
-
-      <!-- Close button -->
-      <button id="enquiry-close" onclick="closeModal()" aria-label="Close" style="
-        position:absolute;top:1rem;right:1rem;
-        width:32px;height:32px;border-radius:50%;
-        background:rgba(255,255,255,0.06);border:none;cursor:pointer;
-        color:rgba(255,255,255,0.4);font-size:18px;line-height:1;
-        display:flex;align-items:center;justify-content:center;
-        transition:background 0.2s,color 0.2s;
-      " onmouseover="this.style.background='rgba(255,255,255,0.12)';this.style.color='rgba(255,255,255,0.8)'"
-         onmouseout="this.style.background='rgba(255,255,255,0.06)';this.style.color='rgba(255,255,255,0.4)'">
-        ×
-      </button>
-
-      <!-- Eyebrow -->
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.5rem;">
-        <div style="flex:1;height:1px;background:rgba(42,181,198,0.3);"></div>
-        <span style="font-family:'Poppins',sans-serif;font-size:10px;font-weight:700;letter-spacing:2.5px;color:rgba(42,181,198,0.7);white-space:nowrap;">— ENQUIRY RECEIVED —</span>
-        <div style="flex:1;height:1px;background:rgba(42,181,198,0.3);"></div>
-      </div>
-
-      <!-- Icon box -->
-      <div style="display:flex;justify-content:center;margin-bottom:1.5rem;">
-        <div id="enquiry-icon" style="
-          width:64px;height:64px;border-radius:12px;
-          background:rgba(42,181,198,0.15);
-          border:1px solid rgba(42,181,198,0.4);
-          display:flex;align-items:center;justify-content:center;
-          font-size:28px;
-          transform:scale(0);
-          transition:transform 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.2s;
-        ">🏆</div>
-      </div>
-
-      <!-- Headline -->
-      <h2 style="font-family:'Poppins',sans-serif;font-size:26px;font-weight:800;color:#fff;text-align:center;margin:0 0 0.75rem;line-height:1.3;">
-        We'll Be In <span style="color:#2ab5c6;">Touch Shortly.</span>
-      </h2>
-
-      <!-- Body -->
-      <p style="font-family:'Nunito',sans-serif;font-size:14px;color:rgba(255,255,255,0.5);text-align:center;margin:0 0 1.5rem;line-height:1.6;">
-        Your trophy and awards enquiry has been received. Our team will contact you within 1 business day to discuss your order.
-      </p>
-
-      <!-- Divider -->
-      <div style="height:1px;background:linear-gradient(to right,transparent,rgba(42,181,198,0.25),transparent);margin-bottom:1.5rem;"></div>
-
-      <!-- Stats grid -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:1.5rem;">
-        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:1rem;text-align:center;">
-          <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:#2ab5c6;line-height:1;">1 Day</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.3);margin-top:4px;">Response Time</div>
-        </div>
-        <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:1rem;text-align:center;">
-          <div style="font-family:'Poppins',sans-serif;font-size:28px;font-weight:800;color:#2ab5c6;line-height:1;">5 ★</div>
-          <div style="font-family:'Poppins',sans-serif;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.3);margin-top:4px;">Google Rating</div>
-        </div>
-      </div>
-
-      <!-- Buttons grid -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:0;">
-        <button onclick="closeModal()" style="
-          font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;
-          text-transform:uppercase;letter-spacing:1.2px;
-          color:#fff;background:transparent;
-          border:1.5px solid rgba(255,255,255,0.25);
-          border-radius:8px;padding:0.75rem;cursor:pointer;
-          transition:border-color 0.2s,color 0.2s;
-        " onmouseover="this.style.borderColor='rgba(255,255,255,0.6)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.25)'">
-          ← Back to Site
-        </button>
-        <a href="tel:0295401000" style="
-          font-family:'Poppins',sans-serif;font-size:12px;font-weight:700;
-          text-transform:uppercase;letter-spacing:1.2px;
-          color:#2ab5c6;background:transparent;
-          border:1.5px solid rgba(42,181,198,0.4);
-          border-radius:8px;padding:0.75rem;
-          display:flex;align-items:center;justify-content:center;
-          text-decoration:none;
-          transition:border-color 0.2s,color 0.2s;
-        " onmouseover="this.style.borderColor='#2ab5c6'" onmouseout="this.style.borderColor='rgba(42,181,198,0.4)'">
-          <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg> (02) 9540 1000
-        </a>
-      </div>
-
-      <!-- Progress bar -->
-      <div style="position:absolute;bottom:0;left:0;width:100%;height:3px;background:rgba(255,255,255,0.05);">
-        <div id="enquiry-progress" style="
-          height:100%;
-          background:linear-gradient(to right,#1a4d7c,#2ab5c6);
-          transform-origin:left;transform:scaleX(1);
-          transition:none;
-        "></div>
-      </div>
-    </div>
-  </div>
-
   <style>
-    #enquiry-overlay.active { opacity:1; pointer-events:auto; }
-    #enquiry-overlay.active #enquiry-card { transform:translateY(0) scale(1); }
-    #enquiry-overlay.active #enquiry-icon { transform:scale(1); }
-    #enquiry-progress.animating {
-      transform:scaleX(0);
-      transition:transform 8s linear;
-    }
-    #quote-submit:hover:not(:disabled) { background:#2BBCD6 !important; }
-    #quote-submit:disabled { opacity:0.7; cursor:not-allowed; }
-  </style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #0D4E7A; --navy-deep: #0A3D61; --midblue: #1874AA;
+            --cyan: #2BBCD6; --cyan-light: #7DD9EC; --ice: #F4F8FA;
+            --white: #FFFFFF; --text: #333333; --text-light: #666666;
+        }
+        body { font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); line-height: 1.8; background: var(--white); }
+        h1, h2, h3, h4, .kicker, nav a, .cta-button, .hero-btn { font-family: 'Poppins', sans-serif; }
+        html { scroll-behavior: smooth; }
+        img { max-width: 100%; }
 
-  <script>
-    var _modalTimer = null;
+        /* HAMBURGER */
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0; width: 30px; height: 22px; position: relative; z-index: 1100; }
+        .nav-toggle span { display: block; position: absolute; height: 2px; width: 100%; background: var(--white); border-radius: 2px; transition: all 0.3s ease; }
+        .nav-toggle span:nth-child(1) { top: 0; } .nav-toggle span:nth-child(2) { top: 10px; } .nav-toggle span:nth-child(3) { top: 20px; }
+        .nav-toggle.open span:nth-child(1) { top: 10px; transform: rotate(45deg); }
+        .nav-toggle.open span:nth-child(2) { opacity: 0; }
+        .nav-toggle.open span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
+        #mainNav { display: flex; gap: 34px; }
+        @media (max-width: 1100px) {
+            #mainNav { display: none; position: fixed; top: 0; right: 0; height: 100vh; width: 260px; background: var(--navy-deep); flex-direction: column; padding: 100px 30px; gap: 22px; z-index: 1050; transition: transform 0.35s ease; transform: translateX(100%); }
+            #mainNav.open { display: flex; transform: translateX(0); }
+            .nav-toggle { display: block; }
+        }
 
-    function openModal() {
-      var overlay = document.getElementById('enquiry-overlay');
-      var progress = document.getElementById('enquiry-progress');
+        /* MOBILE CALL BAR */
+        .mobile-call-bar { display: none; position: fixed; bottom: 0; left: 0; width: 100%; z-index: 1200; background: var(--cyan); box-shadow: 0 -4px 20px rgba(0,0,0,0.2); }
+        .mobile-call-bar a { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 16px; color: var(--white); text-decoration: none; font-weight: 700; font-size: 15px; letter-spacing: 0.5px; text-transform: uppercase; }
+        .mobile-call-bar svg { width: 20px; height: 20px; }
+        @media (max-width: 1100px) { .mobile-call-bar { display: block; } body { padding-bottom: 60px; } }
 
-      overlay.classList.add('active');
-      document.body.style.overflow = 'hidden';
+        /* HEADER */
+        header { background: rgba(13,78,122,0.92); color: var(--white); padding: 18px 60px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; backdrop-filter: blur(10px); transition: all 0.5s ease; }
+        header.scrolled { background: rgba(10,61,97,0.96); box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+        header .logo img { height: 46px; width: auto; display: block; }
+        nav a { color: var(--white); text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 0.5px; transition: color 0.3s; text-transform: uppercase; }
+        nav a:hover { color: var(--cyan-light); }
+        .cta-button { padding: 12px 26px; display: inline-block; background: var(--cyan); color: var(--white); border: 1px solid var(--cyan); border-radius: 4px; text-decoration: none; font-weight: 600; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; transition: all 0.3s ease; cursor: pointer; }
+        .cta-button:hover { background: var(--navy-deep); border-color: var(--cyan); }
 
-      // Reset & animate progress bar
-      progress.classList.remove('animating');
-      void progress.offsetWidth; // force reflow
-      progress.classList.add('animating');
+        /* PAGE HERO */
+        .page-hero { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%); color: var(--white); padding: 90px 40px 80px; text-align: center; }
+        .page-hero .kicker { color: var(--cyan-light); justify-content: center; display: flex; }
+        .page-hero h1 { font-size: 48px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 16px; }
+        .page-hero h1 em { font-style: normal; color: var(--cyan-light); }
+        .page-hero p { font-size: 18px; font-weight: 400; color: rgba(255,255,255,0.85); max-width: 640px; margin: 0 auto; }
+        @media (max-width: 640px) { .page-hero h1 { font-size: 32px; } .page-hero { padding: 60px 24px 56px; } }
 
-      _modalTimer = setTimeout(closeModal, 8000);
-    }
+        .kicker { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); margin-bottom: 16px; }
+        section { padding: 90px 60px; }
+        @media (max-width: 900px) { section { padding: 60px 24px; } }
+        .section-wrap { max-width: 1200px; margin: 0 auto; }
+        .section-wrap-narrow { max-width: 900px; margin: 0 auto; }
+        .section-title { font-size: 40px; font-weight: 700; color: var(--navy); letter-spacing: -0.5px; margin-bottom: 14px; }
+        .section-title em { font-style: normal; color: var(--cyan); }
+        .section-sub { font-size: 16px; color: var(--text-light); max-width: 640px; }
+        .center { text-align: center; margin-left: auto; margin-right: auto; }
 
-    function closeModal() {
-      var overlay = document.getElementById('enquiry-overlay');
-      var progress = document.getElementById('enquiry-progress');
+        /* CARDS */
+        .info-card { background: var(--white); border: 1px solid rgba(13,78,122,0.08); border-radius: 18px; padding: 34px; box-shadow: 0 4px 20px rgba(13,78,122,0.05); transition: all 0.35s cubic-bezier(0.23,1,0.32,1); }
+        .info-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(13,78,122,0.12); border-color: rgba(43,188,214,0.4); }
+        .icon-badge { width: 52px; height: 52px; border-radius: 50%; background: var(--ice); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+        .icon-badge svg { width: 24px; height: 24px; color: var(--cyan); }
+        .info-card h3 { font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+        .info-card p { font-size: 14.5px; color: var(--text-light); line-height: 1.7; }
 
-      overlay.classList.remove('active');
-      document.body.style.overflow = '';
-      progress.classList.remove('animating');
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+        @media (max-width: 1000px) { .grid-2 { grid-template-columns: 1fr; gap: 36px; } .grid-3 { grid-template-columns: 1fr 1fr; } .grid-4 { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 640px) { .grid-3, .grid-4 { grid-template-columns: 1fr; } }
 
-      if (_modalTimer) { clearTimeout(_modalTimer); _modalTimer = null; }
-    }
+        .rounded-photo { border-radius: 18px; overflow: hidden; box-shadow: 0 20px 40px rgba(13,78,122,0.14); }
+        .rounded-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    // Close on overlay backdrop click
-    document.getElementById('enquiry-overlay').addEventListener('click', function(e) {
-      if (e.target === this) closeModal();
-    });
+        .stat-strip { background: var(--navy); padding: 70px 60px; }
+        .stat-strip .grid-4 { max-width: 1100px; margin: 0 auto; text-align: center; }
+        .stat-strip .num { font-size: 42px; font-weight: 700; color: var(--cyan-light); letter-spacing: -1px; }
+        .stat-strip .label { font-size: 13.5px; color: rgba(255,255,255,0.8); margin-top: 8px; }
 
-    // Intercept form submit → POST to Web3Forms, then show modal
-    document.getElementById('quote-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var form = this;
-      var btn = document.getElementById('quote-submit');
-      var label = document.getElementById('quote-submit-label');
+        .cta-band { background: linear-gradient(135deg, var(--navy), var(--navy-deep)); color: var(--white); text-align: center; padding: 90px 40px; }
+        .cta-band h2 { font-size: 36px; font-weight: 700; margin-bottom: 14px; }
+        .cta-band h2 em { font-style: normal; color: var(--cyan-light); }
+        .cta-band p { font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 34px; }
 
-      btn.disabled = true;
-      label.textContent = 'Sending…';
+        .step-num { width: 48px; height: 48px; border-radius: 50%; background: var(--navy); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 19px; font-weight: 700; margin: 0 auto 18px; font-family: 'Poppins', sans-serif; }
+        .step-num.alt { background: var(--cyan); }
 
-      var data = new FormData(form);
+        /* FORM */
+        .form-card { background: var(--white); border-radius: 20px; border: 1px solid rgba(13,78,122,0.08); box-shadow: 0 10px 40px rgba(13,78,122,0.08); padding: 44px; }
+        @media (max-width: 640px) { .form-card { padding: 28px; } }
+        .form-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        @media (max-width: 640px) { .form-row2 { grid-template-columns: 1fr; } }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 11.5px; font-weight: 700; margin-bottom: 8px; color: var(--navy); letter-spacing: 0.5px; text-transform: uppercase; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 15px; font-family: 'Nunito', sans-serif; font-size: 15px; border: 1.5px solid #e0e6eb; border-radius: 10px; background: #fafcfd; color: var(--text); transition: all 0.25s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--cyan); background: var(--white); box-shadow: 0 0 0 3px rgba(43,188,214,0.18); }
+        .form-group select { cursor: pointer; appearance: none; padding-right: 40px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%232BBCD6' d='M1 1l5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-submit { position: relative; overflow: hidden; background: var(--cyan); color: var(--white); padding: 16px 40px; border: none; border-radius: 10px; font-weight: 700; font-size: 12.5px; cursor: pointer; transition: all 0.3s; width: 100%; letter-spacing: 1.2px; text-transform: uppercase; font-family: 'Poppins', sans-serif; }
+        .form-submit:hover { background: var(--navy); transform: translateY(-2px); box-shadow: 0 12px 28px rgba(13,78,122,0.25); }
+        .form-submit:disabled { opacity: 0.7; cursor: wait; }
+        .form-note { font-size: 13px; color: var(--text-light); margin-top: -4px; margin-bottom: 20px; }
+        .thankyou { display: none; flex-direction: column; align-items: center; text-align: center; padding: 50px 20px; }
+        .thankyou .tick { width: 64px; height: 64px; border-radius: 50%; background: var(--ice); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+        .thankyou h3 { font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 12px; }
+        .thankyou p { font-size: 14.5px; color: var(--text-light); max-width: 360px; line-height: 1.7; }
+        .thankyou a { color: var(--cyan); font-weight: 700; text-decoration: none; }
 
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: data
-      })
-        .then(function(res) { return res.json(); })
-        .then(function(json) {
-          if (json.success) {
-            form.reset();
-            document.getElementById('quote-form').style.display = 'none';
-            document.getElementById('quote-thankyou').style.display = 'flex';
-          } else {
-            label.textContent = 'Something went wrong — please try again.';
-            btn.disabled = false;
-          }
-        })
-        .catch(function() {
-          label.textContent = 'Network error — please try again.';
-          btn.disabled = false;
+        /* FOOTER */
+        footer { background: var(--navy-deep); color: var(--white); }
+        .footer-banner { background: rgba(43,188,214,0.1); padding: 16px 60px; text-align: center; font-size: 13px; border-bottom: 1px solid rgba(43,188,214,0.18); }
+        .footer-banner a { color: var(--cyan-light); text-decoration: underline; }
+        .footer-main { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px; padding: 70px 60px; max-width: 1400px; margin: 0 auto; }
+        @media (max-width: 900px) { .footer-main { grid-template-columns: 1fr 1fr; gap: 36px; padding: 50px 24px; } }
+        @media (max-width: 560px) { .footer-main { grid-template-columns: 1fr; } }
+        .footer-column h4 { font-size: 11px; font-weight: 600; margin-bottom: 18px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--cyan-light); }
+        .footer-brand img { height: 44px; width: auto; display: block; margin-bottom: 14px; }
+        .footer-brand p { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
+        .footer-socials { display: flex; gap: 12px; }
+        .footer-socials a { display: inline-flex; width: 42px; height: 42px; align-items: center; justify-content: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(43,188,214,0.45); border-radius: 10px; color: var(--cyan-light); transition: all 0.3s; }
+        .footer-socials a:hover { color: var(--navy-deep); background: var(--cyan); }
+        .footer-column ul { list-style: none; }
+        .footer-column li { margin-bottom: 11px; }
+        .footer-column a { font-size: 13px; color: rgba(255,255,255,0.85); text-decoration: none; }
+        .footer-column a:hover { color: var(--cyan-light); }
+        .footer-bottom { background: rgba(43,188,214,0.08); padding: 20px 24px; text-align: center; font-size: 12px; color: rgba(255,255,255,0.7); border-top: 1px solid rgba(43,188,214,0.15); }
+        .footer-bottom a { color: var(--cyan-light); text-decoration: none; }
+
+        .fade-in-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
+        .fade-in-up.animated { opacity: 1; transform: translateY(0); }
+        .stagger-1 { transition-delay: 0.05s; } .stagger-2 { transition-delay: 0.15s; } .stagger-3 { transition-delay: 0.25s; } .stagger-4 { transition-delay: 0.35s; }
+</style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo" aria-label="SportsGift Trophies home"><img src="BRAND_ASSETS/sportsgift-icon.svg" alt="SportsGift Trophies"></a>
+        <button class="nav-toggle" id="navToggle" onclick="toggleNav()" aria-label="Menu"><span></span><span></span><span></span></button>
+        <nav id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="engraving.html">Engraving</a>
+            <a href="custom-orders.html">Custom Orders</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="about.html">About</a>
+        </nav>
+        <a href="contact.html" class="cta-button">Contact Us</a>
+    </header>
+
+    <div class="mobile-call-bar">
+        <a href="tel:0295401000">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            (02) 9540 1000
+        </a>
+    </div>
+
+    <section class="page-hero">
+        <div class="kicker">Get in touch</div>
+        <h1>Contact <em>us.</em></h1>
+        <p>We'd love to hear from you. Get in touch for a quote or general enquiry.</p>
+    </section>
+
+    <section style="background:var(--ice);">
+        <div class="section-wrap">
+            <div class="grid-2" style="align-items:start;gap:40px;">
+
+                <div class="form-card">
+                    <h2 style="font-size:26px;color:var(--navy);margin-bottom:8px;">Get a quote</h2>
+                    <p style="font-size:14px;color:var(--text-light);margin-bottom:28px;">Fill in the details below and we'll get back to you as soon as we can.</p>
+
+                    <form id="quote-form">
+                        <input type="hidden" name="access_key" value="283d11cd-6ec5-41d0-a93c-303af0ec4f27" />
+                        <input type="hidden" name="subject" value="New Quote Request – SportsGift Trophies (Contact Page)" />
+                        <input type="hidden" name="redirect" value="" />
+
+                        <div class="form-row2">
+                            <div class="form-group"><label>Full Name *</label><input type="text" name="name" placeholder="Jane Smith" required></div>
+                            <div class="form-group"><label>Email Address *</label><input type="email" name="email" placeholder="you@example.com" required></div>
+                        </div>
+                        <div class="form-row2">
+                            <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" placeholder="0400 000 000"></div>
+                            <div class="form-group"><label>Organisation / Club Name</label><input type="text" name="organisation" placeholder="e.g. Gymea FC"></div>
+                        </div>
+                        <div class="form-row2">
+                            <div class="form-group">
+                                <label>Sport / Category</label>
+                                <select name="sport">
+                                    <option value="">Select…</option>
+                                    <option>Football</option><option>Cricket</option><option>Netball</option>
+                                    <option>Swimming</option><option>Athletics</option><option>Tennis</option>
+                                    <option>Golf</option><option>Multi-sport</option><option>School</option>
+                                    <option>Corporate</option><option>Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Approximate Quantity</label>
+                                <select name="quantity">
+                                    <option value="">Select…</option>
+                                    <option>1-10</option><option>11-25</option><option>26-50</option>
+                                    <option>51-100</option><option>100+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row2">
+                            <div class="form-group"><label>Event / Presentation Date</label><input type="date" name="event_date"></div>
+                            <div class="form-group">
+                                <label>Product Interest</label>
+                                <select name="product_interest">
+                                    <option value="">Select…</option>
+                                    <option>Trophies</option><option>Medals</option><option>Plaques &amp; Shields</option>
+                                    <option>Perpetual Awards</option><option>Drinkware</option><option>Name Badges</option>
+                                    <option>Not sure yet</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Message / Additional Details</label>
+                            <textarea name="message" placeholder="Tell us more about your order, deadlines, or anything else we should know…"></textarea>
+                        </div>
+                        <button type="submit" id="quote-submit" class="form-submit"><span id="quote-submit-label">Send Quote Request</span></button>
+                    </form>
+
+                    <div id="quote-thankyou" class="thankyou">
+                        <div class="tick"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2BBCD6" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
+                        <h3>Thanks, we'll be in touch!</h3>
+                        <p>We've received your quote request. If it's urgent, call us on <a href="tel:0295401000">(02) 9540 1000</a>.</p>
+                    </div>
+                </div>
+
+                <div style="display:flex;flex-direction:column;gap:24px;">
+                    <div class="info-card">
+                        <h2 style="font-size:22px;color:var(--navy);margin-bottom:22px;">Get in touch</h2>
+                        <div style="display:flex;flex-direction:column;gap:22px;">
+                            <div style="display:flex;gap:16px;align-items:flex-start;">
+                                <div class="icon-badge" style="margin-bottom:0;flex-shrink:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+                                <div>
+                                    <p style="font-weight:700;color:var(--navy);margin-bottom:4px;">Location</p>
+                                    <p style="font-size:14px;color:var(--text-light);">79 Gymea Bay Rd<br>Gymea NSW 2227</p>
+                                    <p style="font-size:12.5px;margin-top:8px;padding:10px 12px;border-radius:8px;background:rgba(43,188,214,0.08);border:1px solid rgba(43,188,214,0.2);color:var(--navy);">In the back of The Gymea Lily shopping centre. Not the Vinnies building.</p>
+                                </div>
+                            </div>
+                            <div style="display:flex;gap:16px;align-items:flex-start;">
+                                <div class="icon-badge" style="margin-bottom:0;flex-shrink:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+                                <div>
+                                    <p style="font-weight:700;color:var(--navy);margin-bottom:4px;">Phone</p>
+                                    <a href="tel:0295401000" style="font-size:14px;color:var(--text-light);text-decoration:none;">(02) 9540 1000</a>
+                                </div>
+                            </div>
+                            <div style="display:flex;gap:16px;align-items:flex-start;">
+                                <div class="icon-badge" style="margin-bottom:0;flex-shrink:0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+                                <div>
+                                    <p style="font-weight:700;color:var(--navy);margin-bottom:4px;">Email</p>
+                                    <a href="mailto:sales@sportsgift.com.au" style="font-size:14px;color:var(--text-light);text-decoration:none;">sales@sportsgift.com.au</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3 style="font-size:17px;color:var(--navy);margin-bottom:16px;">Business hours</h3>
+                        <table style="width:100%;font-size:14px;color:var(--text-light);border-collapse:collapse;">
+                            <tr style="border-bottom:1px solid #eef2f5;"><td style="padding:8px 0;font-weight:600;color:var(--navy);">Monday to Friday</td><td style="padding:8px 0;text-align:right;">9:00am to 5:00pm</td></tr>
+                            <tr style="border-bottom:1px solid #eef2f5;"><td style="padding:8px 0;font-weight:600;color:var(--navy);">Saturday</td><td style="padding:8px 0;text-align:right;">9:00am to 1:00pm</td></tr>
+                            <tr><td style="padding:8px 0;font-weight:600;color:var(--navy);">Sunday</td><td style="padding:8px 0;text-align:right;color:#a3b1ba;">Closed</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="rounded-photo" style="height:260px;">
+                        <iframe title="SportsGift Trophies location map" src="https://maps.google.com/maps?q=79+Gymea+Bay+Rd+Gymea+NSW+2227+Australia&output=embed" width="100%" height="100%" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-banner">
+            <p>Have a question? Contact us at <a href="mailto:sales@sportsgift.com.au">sales@sportsgift.com.au</a></p>
+        </div>
+        <div class="footer-main">
+            <div class="footer-column footer-brand">
+                <img src="BRAND_ASSETS/sportsgift-icon.svg" alt="SportsGift Trophies">
+                <p>Trophies, medals, awards and custom engraving for sports clubs, schools and businesses across the Sutherland Shire.</p>
+                <div class="footer-socials">
+                    <a href="#" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="https://www.google.com/search?q=SportsGift+Trophies+Gymea+reviews" target="_blank" rel="noopener" title="Google Reviews" aria-label="Google Reviews"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.24 10.4V14.4H17.92C17.66 15.76 16.88 16.91 15.71 17.68V20.26H19.28C21.36 18.34 22.56 15.5 22.56 12.25C22.56 11.47 22.49 10.72 22.36 10H12.24V10.4Z"></path><path d="M12.24 22C15.11 22 17.52 21.05 19.28 19.42L15.71 16.84C14.74 17.49 13.6 17.88 12.24 17.88C9.47 17.88 7.13 16.01 6.29 13.5H2.6V16.16C4.35 19.64 7.96 22 12.24 22Z"></path><path d="M6.29 13.5C6.07 12.85 5.95 12.16 5.95 11.45C5.95 10.74 6.07 10.05 6.29 9.4V6.74H2.6C1.87 8.18 1.45 9.77 1.45 11.45C1.45 13.13 1.87 14.72 2.6 16.16L6.29 13.5Z"></path><path d="M12.24 5.02C13.81 5.02 15.21 5.56 16.32 6.62L19.45 3.49C17.52 1.69 15.11 0.6 12.24 0.6C7.96 0.6 4.35 2.96 2.6 6.44L6.29 9.1C7.13 6.59 9.47 5.02 12.24 5.02Z"></path></svg></a>
+                    <a href="#" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"></path></svg></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Products</h4>
+                <ul>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="engraving.html">Engraving Services</a></li>
+                    <li><a href="custom-orders.html">Custom Orders</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:0295401000">(02) 9540 1000</a></li>
+                    <li style="margin-top:14px;"><a href="mailto:sales@sportsgift.com.au">sales@sportsgift.com.au</a></li>
+                    <li style="margin-top:14px;font-size:12px;color:rgba(255,255,255,0.75);">79 Gymea Bay Rd<br>Gymea NSW 2227</li>
+                    <li style="margin-top:10px;"><a href="https://maps.google.com/maps?q=79+Gymea+Bay+Rd+Gymea+NSW+2227" target="_blank" style="font-size:12px;">View on Google Maps</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SportsGift Trophies. All rights reserved. | ABN: 96 643 687 843 | Website by <a href="https://www.latitudemarketing.au/" target="_blank" rel="noopener">Latitude Marketing</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('animated'); observer.unobserve(entry.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.fade-in-up').forEach((el) => observer.observe(el));
+
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 60) header.classList.add('scrolled'); else header.classList.remove('scrolled');
         });
-    });
-  </script>
 
+        function toggleNav() {
+            document.getElementById('mainNav').classList.toggle('open');
+            document.getElementById('navToggle').classList.toggle('open');
+        }
+    </script>
+
+    <script>
+        document.getElementById('quote-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var form = this;
+            var btn = document.getElementById('quote-submit');
+            var label = document.getElementById('quote-submit-label');
+            btn.disabled = true;
+            label.textContent = 'Sending…';
+            fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(form) })
+                .then(function(res) { return res.json(); })
+                .then(function(json) {
+                    if (json.success) {
+                        form.reset();
+                        document.getElementById('quote-form').style.display = 'none';
+                        document.getElementById('quote-thankyou').style.display = 'flex';
+                    } else {
+                        label.textContent = 'Something went wrong. Please try again.';
+                        btn.disabled = false;
+                    }
+                })
+                .catch(function() {
+                    label.textContent = 'Network error. Please try again.';
+                    btn.disabled = false;
+                });
+        });
+    </script>
 </body>
 </html>
