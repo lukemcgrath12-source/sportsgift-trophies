@@ -104,3 +104,28 @@
   dlg.querySelector('.x-lightbox__close').addEventListener('click', function () { dlg.close(); });
   dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
 })();
+
+/* Reveal on scroll (all pages) */
+(function () {
+  var els = document.querySelectorAll('.x-reveal:not(.is-in)');
+  if (!els.length) return;
+  if (!('IntersectionObserver' in window)) { Array.prototype.forEach.call(els, function (e) { e.classList.add('is-in'); }); return; }
+  var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }); }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  Array.prototype.forEach.call(els, function (e) { io.observe(e); });
+})();
+
+/* Conversion tracking: quote requests (thank-you page), calls, emails, catalogue downloads.
+   Sends to Vercel Web Analytics custom events (Pro plan) and to any dataLayer/gtag if added later. */
+window.sgTrack = function (name, props) {
+  try { if (window.va) window.va('event', { name: name, data: props || {} }); } catch (e) {}
+  try { (window.dataLayer = window.dataLayer || []).push(Object.assign({ event: name }, props || {})); } catch (e) {}
+  try { if (window.gtag) window.gtag('event', name, props || {}); } catch (e) {}
+};
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a) return;
+  var h = a.getAttribute('href');
+  if (h.indexOf('tel:') === 0) sgTrack('call_click', { page: location.pathname });
+  else if (h.indexOf('mailto:') === 0) sgTrack('email_click', { page: location.pathname });
+  else if (/catalogues\/.*\.pdf$/.test(h)) sgTrack('catalogue_open', { file: h.split('/').pop() });
+}, true);

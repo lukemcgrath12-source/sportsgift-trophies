@@ -19,7 +19,7 @@
             --white: #FFFFFF; --text: #333333; --text-light: #666666;
         }
         body { font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; color: var(--text); line-height: 1.8; background: var(--white); }
-        h1, h2, h3, h4, .kicker, nav a, .cta-button, .hero-btn { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3, .kicker, nav a, .cta-button { font-family: 'Poppins', sans-serif; }
         html { scroll-behavior: smooth; }
         img { max-width: 100%; }
 
@@ -63,42 +63,8 @@
         .kicker { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--cyan); margin-bottom: 16px; }
         section { padding: 90px 60px; }
         @media (max-width: 900px) { section { padding: 60px 24px; } }
-        .section-wrap { max-width: 1200px; margin: 0 auto; }
-        .section-wrap-narrow { max-width: 900px; margin: 0 auto; }
-        .section-title { font-size: 40px; font-weight: 700; color: var(--navy); letter-spacing: -0.5px; margin-bottom: 14px; }
-        .section-title em { font-style: normal; color: var(--cyan); }
-        .section-sub { font-size: 16px; color: var(--text-light); max-width: 640px; }
-        .center { text-align: center; margin-left: auto; margin-right: auto; }
 
         /* CARDS */
-        .info-card { background: var(--white); border: 1px solid rgba(13,78,122,0.08); border-radius: 18px; padding: 34px; box-shadow: 0 4px 20px rgba(13,78,122,0.05); transition: all 0.35s cubic-bezier(0.23,1,0.32,1); }
-        .info-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(13,78,122,0.12); border-color: rgba(43,188,214,0.4); }
-        .icon-badge { width: 52px; height: 52px; border-radius: 50%; background: var(--ice); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-        .icon-badge svg { width: 24px; height: 24px; color: var(--cyan); }
-        .info-card h3 { font-size: 19px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
-        .info-card p { font-size: 14.5px; color: var(--text-light); line-height: 1.7; }
-
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
-        .grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
-        @media (max-width: 1000px) { .grid-2 { grid-template-columns: 1fr; gap: 36px; } .grid-3 { grid-template-columns: 1fr 1fr; } .grid-4 { grid-template-columns: 1fr 1fr; } }
-        @media (max-width: 640px) { .grid-3, .grid-4 { grid-template-columns: 1fr; } }
-
-        .rounded-photo { border-radius: 18px; overflow: hidden; box-shadow: 0 20px 40px rgba(13,78,122,0.14); }
-        .rounded-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-        .stat-strip { background: var(--navy); padding: 70px 60px; }
-        .stat-strip .grid-4 { max-width: 1100px; margin: 0 auto; text-align: center; }
-        .stat-strip .num { font-size: 42px; font-weight: 700; color: var(--cyan-light); letter-spacing: -1px; }
-        .stat-strip .label { font-size: 13.5px; color: rgba(255,255,255,0.8); margin-top: 8px; }
-
-        .cta-band { background: linear-gradient(135deg, var(--navy), var(--navy-deep)); color: var(--white); text-align: center; padding: 90px 40px; }
-        .cta-band h2 { font-size: 36px; font-weight: 700; margin-bottom: 14px; }
-        .cta-band h2 em { font-style: normal; color: var(--cyan-light); }
-        .cta-band p { font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 34px; }
-
-        .step-num { width: 48px; height: 48px; border-radius: 50%; background: var(--navy); color: var(--white); display: flex; align-items: center; justify-content: center; font-size: 19px; font-weight: 700; margin: 0 auto 18px; font-family: 'Poppins', sans-serif; }
-        .step-num.alt { background: var(--cyan); }
 
         /* FORM */
         .form-card { background: var(--white); border-radius: 20px; border: 1px solid rgba(13,78,122,0.08); box-shadow: 0 10px 40px rgba(13,78,122,0.08); padding: 44px; }
@@ -123,28 +89,12 @@
 
         /* FOOTER */
         footer { background: var(--navy-deep); color: var(--white); }
-        .footer-banner { background: rgba(43,188,214,0.1); padding: 16px 60px; text-align: center; font-size: 13px; border-bottom: 1px solid rgba(43,188,214,0.18); }
-        .footer-banner a { color: var(--cyan-light); text-decoration: underline; }
-        .footer-main { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 60px; padding: 70px 60px; max-width: 1400px; margin: 0 auto; }
-        @media (max-width: 900px) { .footer-main { grid-template-columns: 1fr 1fr; gap: 36px; padding: 50px 24px; } }
-        @media (max-width: 560px) { .footer-main { grid-template-columns: 1fr; } }
-        .footer-column h4 { font-size: 11px; font-weight: 600; margin-bottom: 18px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--cyan-light); }
-        .footer-brand img { height: 44px; width: auto; display: block; margin-bottom: 14px; }
-        .footer-brand p { font-size: 13px; line-height: 1.8; color: rgba(255,255,255,0.85); margin-bottom: 20px; }
-        .footer-socials { display: flex; gap: 12px; }
-        .footer-socials a { display: inline-flex; width: 42px; height: 42px; align-items: center; justify-content: center; background: rgba(255,255,255,0.06); border: 1px solid rgba(43,188,214,0.45); border-radius: 10px; color: var(--cyan-light); transition: all 0.3s; }
-        .footer-socials a:hover { color: var(--navy-deep); background: var(--cyan); }
-        .footer-column ul { list-style: none; }
-        .footer-column li { margin-bottom: 11px; }
-        .footer-column a { font-size: 13px; color: rgba(255,255,255,0.85); text-decoration: none; }
-        .footer-column a:hover { color: var(--cyan-light); }
-        .footer-bottom { background: rgba(43,188,214,0.08); padding: 20px 24px; text-align: center; font-size: 12px; color: rgba(255,255,255,0.7); border-top: 1px solid rgba(43,188,214,0.15); }
-        .footer-bottom a { color: var(--cyan-light); text-decoration: none; }
 
         .fade-in-up { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
         .fade-in-up.animated { opacity: 1; transform: translateY(0); }
-        .stagger-1 { transition-delay: 0.05s; } .stagger-2 { transition-delay: 0.15s; } .stagger-3 { transition-delay: 0.25s; } .stagger-4 { transition-delay: 0.35s; }
-</style>
+
+    
+    </style>
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SportsGift Trophies">
     <meta property="og:title" content="Custom Orders | SportsGift Trophies">
@@ -155,8 +105,7 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sportsgift.com.au/"}, {"@type": "ListItem", "position": 2, "name": "Custom Orders", "item": "https://www.sportsgift.com.au/custom-orders.html"}]}</script>
-    <link rel="stylesheet" href="assets/css/upgrade.css">
-    <link rel="stylesheet" href="assets/css/sg-2026.css">
+    <link rel="stylesheet" href="assets/css/sg.css">
 </head>
 <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -175,11 +124,9 @@
         <a href="contact.html#quote" class="cta-button">Get a quote</a>
     </header>
 
-    <div class="mobile-call-bar">
-        <a href="tel:0295401000">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-            (02) 9540 1000
-        </a>
+    <div class="mobile-call-bar x-mbar" role="region" aria-label="Quick actions">
+        <a class="x-mbar__call" href="tel:0295401000"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</a>
+        <a class="x-mbar__quote" href="contact.html#quote">Get a quote</a>
     </div>
 
     <div id="main" tabindex="-1"></div><section class="page-hero">
@@ -190,41 +137,22 @@
         <p>Fully bespoke awards designed around your club, event or brand.</p>
     </section>
 
-    <section>
-        <div class="section-wrap">
-            <div class="center" style="margin-bottom:60px;max-width:600px;">
-                <h2 class="section-title">How the custom order process works</h2>
-            </div>
-            <div class="grid-4">
-                <div class="fade-in-up" style="text-align:center;">
-                    <div class="step-num ">1</div>
-                    <h3 style="font-size:17px;color:var(--navy);margin-bottom:10px;">Submit your brief</h3>
-                    <p style="font-size:14px;color:var(--text-light);">Fill in the quote form below with your requirements, quantities and any artwork or logo files.</p>
-                </div>
-                <div class="fade-in-up" style="text-align:center;">
-                    <div class="step-num alt">2</div>
-                    <h3 style="font-size:17px;color:var(--navy);margin-bottom:10px;">Receive your quote</h3>
-                    <p style="font-size:14px;color:var(--text-light);">We'll get back to you with a detailed quote and product suggestions.</p>
-                </div>
-                <div class="fade-in-up" style="text-align:center;">
-                    <div class="step-num ">3</div>
-                    <h3 style="font-size:17px;color:var(--navy);margin-bottom:10px;">Approve the proof</h3>
-                    <p style="font-size:14px;color:var(--text-light);">We'll send a digital proof for your approval before any production begins.</p>
-                </div>
-                <div class="fade-in-up" style="text-align:center;">
-                    <div class="step-num alt">4</div>
-                    <h3 style="font-size:17px;color:var(--navy);margin-bottom:10px;">Deliver &amp; delight</h3>
-                    <p style="font-size:14px;color:var(--text-light);">Your finished order is carefully packed and ready for pickup or delivery.</p>
-                </div>
-            </div>
+    <section class="x-section">
+        <div class="x-wrap">
+            <p class="x-eyebrow">How it works</p>
+            <h2 class="x-pair">Four steps, <span>one local team.</span></h2>
+            <ol class="x-steps"><li class="x-reveal"><span class="x-steps__n">01</span><h3>Submit your brief</h3><p>Fill in the quote form below with your requirements, quantities and any artwork or logo files.</p></li><li class="x-reveal"><span class="x-steps__n">02</span><h3>Receive your quote</h3><p>We'll get back to you with a detailed quote and product suggestions.</p></li><li class="x-reveal"><span class="x-steps__n">03</span><h3>Approve the proof</h3><p>We'll send a digital proof for your approval before any production begins.</p></li><li class="x-reveal"><span class="x-steps__n">04</span><h3>Ready for pickup or delivery</h3><p>Your finished order is carefully packed and ready for pickup or delivery.</p></li></ol>
         </div>
     </section>
 
-    <section style="background:var(--ice);">
-        <div class="section-wrap-narrow">
-            <div class="center" style="margin-bottom:44px;">
-                <h2 class="section-title">Request a custom quote</h2>
-                <p class="section-sub center">Fill in as much detail as you can. The more we know, the faster we can quote.</p>
+    <section class="x-section x-section--ice" id="quote">
+        <div class="x-wrap x-formsplit">
+            <div class="x-formsplit__aside">
+                <p class="x-eyebrow">Custom quote</p>
+                <h2 class="x-pair">Tell us what you need. <span>We'll take it from there.</span></h2>
+                <p class="x-body x-first">Fill in as much detail as you can. The more we know, the faster we can quote.</p>
+                <ul class="x-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Digital proof before production</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Engraved in-house in Gymea</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>No hidden costs</span></li></ul>
+                <p class="x-body">Prefer to talk it through? Call <a class="x-link" href="tel:0295401000">(02) 9540 1000</a>.</p>
             </div>
             <div class="form-card">
                 <form id="custom-quote-form">
@@ -234,11 +162,11 @@
 
                     <div class="form-row2">
                         <div class="form-group">
-                            <label for="custom-orders-name">Your Name *</label>
+                            <label for="custom-orders-name">Your name *</label>
                             <input id="custom-orders-name" type="text" name="name" placeholder="Jane Smith" required>
                         </div>
                         <div class="form-group">
-                            <label for="custom-orders-organisation">Organisation / Club</label>
+                            <label for="custom-orders-organisation">Organisation / club</label>
                             <input id="custom-orders-organisation" type="text" name="organisation" placeholder="North Sydney Football Club">
                         </div>
                     </div>
@@ -254,7 +182,7 @@
                     </div>
                     <div class="form-row2">
                         <div class="form-group">
-                            <label for="custom-orders-product_type">Product Type *</label>
+                            <label for="custom-orders-product_type">Product type *</label>
                             <select id="custom-orders-product_type" name="product_type" required>
                                 <option value="">Select…</option>
                                 <option>Trophy</option><option>Medal</option><option>Plaque</option>
@@ -267,15 +195,15 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="custom-orders-required_by">Required By Date</label>
+                        <label for="custom-orders-required_by">Required by date</label>
                         <input id="custom-orders-required_by" type="date" name="required_by">
                     </div>
                     <div class="form-group">
-                        <label for="custom-orders-message">Details &amp; Special Requirements</label>
+                        <label for="custom-orders-message">Details &amp; special requirements</label>
                         <textarea id="custom-orders-message" name="message" placeholder="Describe your award, engraving text, colours, logo requirements…"></textarea>
                     </div>
-                    <p class="form-note">Have artwork or a logo? Email it to <a href="mailto:sales@sportsgift.com.au" style="color:var(--cyan);">sales@sportsgift.com.au</a> after submitting.</p>
-                    <button type="submit" id="custom-quote-submit" class="form-submit"><span id="custom-quote-label">Submit Quote Request</span></button>
+                    <p class="form-note">Have artwork or a logo? Email it to <a href="mailto:sales@sportsgift.com.au" >sales@sportsgift.com.au</a> after submitting.</p>
+                    <button type="submit" id="custom-quote-submit" class="form-submit"><span id="custom-quote-label">Send quote request</span></button>
                 </form>
                 <div id="custom-quote-thankyou" class="thankyou">
                     <div class="tick"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2BBCD6" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></div>
@@ -298,6 +226,7 @@
                 <a href="engraving.html">Engraving</a>
                 <a href="custom-orders.html">Custom orders</a>
                 <a href="gallery.html">Gallery</a>
+                <a href="presentation-nights.html">Presentation nights</a>
             </nav>
             <nav class="x-footer__col" aria-label="Company">
                 <p class="x-footer__h">Company</p>
@@ -318,6 +247,7 @@
                 <a href="mailto:sales@sportsgift.com.au">sales@sportsgift.com.au</a>
             </div>
         </div>
+        <div class="x-wrap x-footer__sports"><span>Trophies by sport</span><a href="netball-trophies.html">Netball</a><a href="football-trophies.html">Football</a><a href="aussie-rules-trophies.html">Aussie Rules</a><a href="rugby-trophies.html">Rugby</a><a href="basketball-trophies.html">Basketball</a><a href="dance-trophies.html">Dance</a><a href="corporate-awards.html">Corporate awards</a></div>
         <div class="x-wrap x-footer__bottom">
             <p>&copy; 2026 SportsGift Trophies &middot; ABN 96 643 687 843</p>
             <p>Website by <a href="https://www.latitudemarketing.au/" target="_blank" rel="noopener">Latitude Marketing</a></p>
@@ -354,6 +284,8 @@
                 .then(function(json) {
                     if (json.success) {
                         form.reset();
+                        if (window.sgTrack) sgTrack('quote_submitted', { form: 'custom-quote-form', page: location.pathname });
+                        window.location.href = 'thank-you.html?from=' + encodeURIComponent(location.pathname.replace(/^\//, '') || 'index.html');
                         document.getElementById('custom-quote-form').style.display = 'none';
                         document.getElementById('custom-quote-thankyou').style.display = 'flex';
                     } else {
