@@ -56,3 +56,51 @@
     }); }, 0); });
   });
 })();
+
+/* Products: filter catalogues by sport (deep links like products.html#netball still work) */
+(function () {
+  var grid = document.getElementById('catGrid');
+  if (!grid) return;
+  var buttons = document.querySelectorAll('.x-filter');
+  var cards = grid.querySelectorAll('.x-cat');
+  var count = document.getElementById('catCount');
+  function apply(key, scroll) {
+    var n = 0;
+    Array.prototype.forEach.call(cards, function (c) {
+      var s = c.getAttribute('data-sport');
+      var show = key === 'all' || s === key || s === 'all';
+      c.hidden = !show;
+      if (show && s !== 'all') n++;
+    });
+    Array.prototype.forEach.call(buttons, function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-filter') === key ? 'true' : 'false'); });
+    if (count) count.textContent = n;
+    if (scroll) { var f = document.querySelector('.x-filters'); if (f) f.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  }
+  Array.prototype.forEach.call(buttons, function (b) {
+    b.addEventListener('click', function () {
+      var k = b.getAttribute('data-filter');
+      apply(k, false);
+      if (history.replaceState) history.replaceState(null, '', k === 'all' ? location.pathname : '#' + k);
+    });
+  });
+  var hash = (location.hash || '').slice(1);
+  var known = Array.prototype.some.call(buttons, function (b) { return b.getAttribute('data-filter') === hash; });
+  if (known) apply(hash, true);
+})();
+
+/* Gallery: lightbox using the native dialog element */
+(function () {
+  var dlg = document.getElementById('lightbox');
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+  var img = dlg.querySelector('img');
+  document.querySelectorAll('.x-g').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.querySelector('img');
+      img.src = b.getAttribute('data-full');
+      img.alt = t ? t.alt : '';
+      dlg.showModal();
+    });
+  });
+  dlg.querySelector('.x-lightbox__close').addEventListener('click', function () { dlg.close(); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+})();

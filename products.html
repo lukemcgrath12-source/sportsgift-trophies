@@ -197,144 +197,147 @@
     </style>
 
     <div id="main" tabindex="-1"></div><section class="page-hero">
-        <img class="sg-hero-bg" src="assets/images/opt/gallery-1-1200.webp" srcset="assets/images/opt/gallery-1-640.webp 640w, assets/images/opt/gallery-1-1200.webp 1200w, assets/images/opt/gallery-1-1920.webp 1920w" sizes="100vw" alt="" decoding="async">
+        <img class="sg-hero-bg" fetchpriority="high" src="assets/images/opt/gallery-1-1200.webp" srcset="assets/images/opt/gallery-1-640.webp 640w, assets/images/opt/gallery-1-1200.webp 1200w, assets/images/opt/gallery-1-1920.webp 1920w" sizes="100vw" alt="" decoding="async">
         <nav class="sg-crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Products</span></nav>
         <div class="kicker">The full range</div>
-        <h1>Our <em>products.</em></h1>
+        <h1>Trophies, medals and awards <em>for every sport.</em></h1>
         <p>A comprehensive range of awards for every sport, school and corporate occasion.</p>
     </section>
 
-    <section style="background:var(--ice);">
-        <div class="section-wrap">
-            <div class="center" style="margin-bottom:36px;max-width:640px;">
-                <h2 class="section-title">Browse our 2026 catalogues</h2>
-                <p class="section-sub center">Download our full supplier catalogues to explore the complete range. We stock products from Evaton and TCD, two of Australia's leading trophy and award suppliers.</p>
+    <section class="x-section x-section--ice" aria-labelledby="cat-title">
+        <div class="x-wrap">
+            <div class="x-head">
+                <div>
+                    <p class="x-eyebrow">2026 catalogues</p>
+                    <h2 class="x-pair" id="cat-title">Browse the full range. <span>Every piece can be engraved.</span></h2>
+                    <p class="x-lede">We stock products from Evaton and TCD, two of Australia's leading trophy and award suppliers. Open a catalogue, note the product codes you like, and send them through with your quote request.</p>
+                </div>
+                <a class="x-btn x-btn--primary" href="contact.html#quote">Request a quote</a>
             </div>
-            <div class="center" style="max-width:560px;margin-bottom:44px;padding:16px 22px;border-radius:12px;background:rgba(43,188,214,0.08);border:1.5px solid rgba(43,188,214,0.25);font-size:14px;color:var(--navy);">
-                <strong>Tip:</strong> if your sport doesn't have its own dedicated catalogue, award options will be available in the Main / All Sports version.
-            </div>
-            <div class="grid-3">
-                <div id="general" class="catalogue-card fade-in-up">
-                    <div class="catalogue-banner" style="background:linear-gradient(135deg,#0D4E7A,#2BBCD6);">
-                        <svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3h14M5 3a2 2 0 00-2 2v1a5 5 0 005 5h8a5 5 0 005-5V5a2 2 0 00-2-2M9 11v4m6-4v4M7 21h10M9 15h6"/></svg>
-                        <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:600;">All Sports</span>
+            <div class="x-filters" role="group" aria-label="Filter catalogues by sport"><button type="button" class="x-filter" data-filter="all" aria-pressed="true">All</button><button type="button" class="x-filter" data-filter="general" aria-pressed="false">All sports</button><button type="button" class="x-filter" data-filter="afl" aria-pressed="false">Aussie Rules</button><button type="button" class="x-filter" data-filter="basketball" aria-pressed="false">Basketball</button><button type="button" class="x-filter" data-filter="corporate" aria-pressed="false">Corporate</button><button type="button" class="x-filter" data-filter="dance" aria-pressed="false">Dance</button><button type="button" class="x-filter" data-filter="football" aria-pressed="false">Football</button><button type="button" class="x-filter" data-filter="netball" aria-pressed="false">Netball</button><button type="button" class="x-filter" data-filter="rugby" aria-pressed="false">Rugby</button></div>
+            <p class="x-filter-note" aria-live="polite"><span id="catCount">15</span> catalogues. If your sport doesn't have its own catalogue, start with All sports.</p>
+            <div class="x-catgrid" id="catGrid">
+                <article class="x-cat" data-sport="general" id="general">
+                    <a class="x-cat__link" href="catalogues/2026-tcd-main.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-tcd-main-360.webp" srcset="assets/images/catalogues/2026-tcd-main-360.webp 360w, assets/images/catalogues/2026-tcd-main-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Trophies for Distinction Main catalogue 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Trophies for Distinction</span><span class="x-cat__title">Main catalogue 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 43 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="general">
+                    <a class="x-cat__link" href="catalogues/2026-evaton-all-sports.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-evaton-all-sports-360.webp" srcset="assets/images/catalogues/2026-evaton-all-sports-360.webp 360w, assets/images/catalogues/2026-evaton-all-sports-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Some Really Different Trophies All sports 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Some Really Different Trophies</span><span class="x-cat__title">All sports 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 25 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="afl" id="afl">
+                    <a class="x-cat__link" href="catalogues/2026-tcd-aussie-rules.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-tcd-aussie-rules-360.webp" srcset="assets/images/catalogues/2026-tcd-aussie-rules-360.webp 360w, assets/images/catalogues/2026-tcd-aussie-rules-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Trophies for Distinction Aussie Rules 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Trophies for Distinction</span><span class="x-cat__title">Aussie Rules 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 10 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="afl">
+                    <a class="x-cat__link" href="catalogues/2026-evaton-aussie-rules.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-evaton-aussie-rules-360.webp" srcset="assets/images/catalogues/2026-evaton-aussie-rules-360.webp 360w, assets/images/catalogues/2026-evaton-aussie-rules-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Some Really Different Trophies Aussie Rules 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Some Really Different Trophies</span><span class="x-cat__title">Aussie Rules 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 5 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="basketball" id="basketball">
+                    <a class="x-cat__link" href="catalogues/2026-evaton-basketball.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-evaton-basketball-360.webp" srcset="assets/images/catalogues/2026-evaton-basketball-360.webp 360w, assets/images/catalogues/2026-evaton-basketball-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Some Really Different Trophies Basketball 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Some Really Different Trophies</span><span class="x-cat__title">Basketball 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 6 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="corporate" id="corporate">
+                    <a class="x-cat__link" href="catalogues/2026-tcd-corporate.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-tcd-corporate-360.webp" srcset="assets/images/catalogues/2026-tcd-corporate-360.webp 360w, assets/images/catalogues/2026-tcd-corporate-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Trophies for Distinction Awards for Distinction 2026/27 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Trophies for Distinction</span><span class="x-cat__title">Awards for Distinction 2026/27</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 7 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="corporate">
+                    <a class="x-cat__link" href="catalogues/2026-evaton-corporate.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-evaton-corporate-360.webp" srcset="assets/images/catalogues/2026-evaton-corporate-360.webp 360w, assets/images/catalogues/2026-evaton-corporate-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Some Really Different Trophies Corporate 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Some Really Different Trophies</span><span class="x-cat__title">Corporate 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 3 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="dance" id="dance">
+                    <a class="x-cat__link" href="catalogues/2026-tcd-dance.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-tcd-dance-360.webp" srcset="assets/images/catalogues/2026-tcd-dance-360.webp 360w, assets/images/catalogues/2026-tcd-dance-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Trophies for Distinction Dance 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Trophies for Distinction</span><span class="x-cat__title">Dance 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 14 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="dance">
+                    <a class="x-cat__link" href="catalogues/2026-evaton-dance.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-evaton-dance-360.webp" srcset="assets/images/catalogues/2026-evaton-dance-360.webp 360w, assets/images/catalogues/2026-evaton-dance-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Some Really Different Trophies Dance 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Some Really Different Trophies</span><span class="x-cat__title">Dance 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 7 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="football" id="football">
+                    <a class="x-cat__link" href="catalogues/2026-tcd-football.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-tcd-football-360.webp" srcset="assets/images/catalogues/2026-tcd-football-360.webp 360w, assets/images/catalogues/2026-tcd-football-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Trophies for Distinction Football 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Trophies for Distinction</span><span class="x-cat__title">Football 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 9 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="football">
+                    <a class="x-cat__link" href="catalogues/2026-evaton-football.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-evaton-football-360.webp" srcset="assets/images/catalogues/2026-evaton-football-360.webp 360w, assets/images/catalogues/2026-evaton-football-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Some Really Different Trophies Football 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Some Really Different Trophies</span><span class="x-cat__title">Football 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 5 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="netball" id="netball">
+                    <a class="x-cat__link" href="catalogues/2026-tcd-netball.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-tcd-netball-360.webp" srcset="assets/images/catalogues/2026-tcd-netball-360.webp 360w, assets/images/catalogues/2026-tcd-netball-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Trophies for Distinction Netball 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Trophies for Distinction</span><span class="x-cat__title">Netball 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 10 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="netball">
+                    <a class="x-cat__link" href="catalogues/2026-evaton-netball.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-evaton-netball-360.webp" srcset="assets/images/catalogues/2026-evaton-netball-360.webp 360w, assets/images/catalogues/2026-evaton-netball-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Some Really Different Trophies Netball 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Some Really Different Trophies</span><span class="x-cat__title">Netball 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 5 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="rugby" id="rugby">
+                    <a class="x-cat__link" href="catalogues/2026-tcd-rugby.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-tcd-rugby-360.webp" srcset="assets/images/catalogues/2026-tcd-rugby-360.webp 360w, assets/images/catalogues/2026-tcd-rugby-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Trophies for Distinction Rugby league and union 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Trophies for Distinction</span><span class="x-cat__title">Rugby league and union 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 10 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat" data-sport="rugby">
+                    <a class="x-cat__link" href="catalogues/2026-evaton-rugby.pdf" target="_blank" rel="noopener">
+                        <span class="x-cat__cover"><img loading="lazy" decoding="async" src="assets/images/catalogues/2026-evaton-rugby-360.webp" srcset="assets/images/catalogues/2026-evaton-rugby-360.webp 360w, assets/images/catalogues/2026-evaton-rugby-720.webp 720w" sizes="(min-width: 1100px) 260px, (min-width: 640px) 33vw, 50vw" alt="Cover of the Some Really Different Trophies Rugby 2026 catalogue" width="360" height="509"></span>
+                        <span class="x-cat__meta"><span class="x-cat__sup">Some Really Different Trophies</span><span class="x-cat__title">Rugby 2026</span><span class="x-cat__file"><span class="x-sr">Open catalogue, </span>PDF, 6 MB<span class="x-sr"> (opens in a new tab)</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></span></span>
+                    </a>
+                </article>
+                <article class="x-cat x-cat--help" id="other" data-sport="all">
+                    <div class="x-cat__help">
+                        <p class="x-eyebrow">Can't find your sport?</p>
+                        <h3>We cater for many sports beyond these catalogues.</h3>
+                        <p>Get in touch and we'll find the right award for you.</p>
+                        <a class="x-btn x-btn--ghost" href="contact.html">Ask the team</a>
                     </div>
-                    <div class="catalogue-body">
-                        <h3>General Catalogue</h3>
-                        <a href="catalogues/2026-tcd-main.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Trophies for Distinction Main 2026</span><span class="pdf-pill">PDF, 43 MB</span></a>
-                        <a href="catalogues/2026-evaton-all-sports.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Some Really Different Trophies All Sports 2026</span><span class="pdf-pill">PDF, 25 MB</span></a>
-                    </div>
-                </div>
-                <div id="afl" class="catalogue-card fade-in-up">
-                    <div class="catalogue-banner" style="background:linear-gradient(135deg,#0D4E7A,#1874AA);">
-                        <svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5"><ellipse cx="12" cy="12" rx="9" ry="5.5"/><path stroke-linecap="round" d="M3 12h18"/><path stroke-linecap="round" d="M12 6.5c1.5 1 2.5 3 2.5 5.5s-1 4.5-2.5 5.5"/><path stroke-linecap="round" d="M12 6.5c-1.5 1-2.5 3-2.5 5.5s1 4.5 2.5 5.5"/></svg>
-                        <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:600;">Aussie Rules</span>
-                    </div>
-                    <div class="catalogue-body">
-                        <h3>AFL Catalogue</h3>
-                        <a href="catalogues/2026-tcd-aussie-rules.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Trophies for Distinction Aussie Rules 2026</span><span class="pdf-pill">PDF, 10 MB</span></a>
-                        <a href="catalogues/2026-evaton-aussie-rules.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Some Really Different Trophies Aussie Rules 2026</span><span class="pdf-pill">PDF, 5 MB</span></a>
-                    </div>
-                </div>
-                <div id="basketball" class="catalogue-card fade-in-up">
-                    <div class="catalogue-banner" style="background:linear-gradient(135deg,#0A3D61,#2BBCD6);">
-                        <svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M12 3c2.5 2 4 5 4 9s-1.5 7-4 9"/><path stroke-linecap="round" d="M12 3c-2.5 2-4 5-4 9s1.5 7 4 9"/><path stroke-linecap="round" d="M3 12h18"/></svg>
-                        <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:600;">Basketball</span>
-                    </div>
-                    <div class="catalogue-body">
-                        <h3>Basketball Catalogue</h3>
-                        <a href="catalogues/2026-evaton-basketball.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Some Really Different Trophies Basketball 2026</span><span class="pdf-pill">PDF, 6 MB</span></a>
-                    </div>
-                </div>
-                <div id="corporate" class="catalogue-card fade-in-up">
-                    <div class="catalogue-banner" style="background:linear-gradient(135deg,#1874AA,#7DD9EC);">
-                        <svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="9" r="5"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 14l-2 7 5-3 5 3-2-7"/></svg>
-                        <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:600;">Corporate</span>
-                    </div>
-                    <div class="catalogue-body">
-                        <h3>Corporate Awards</h3>
-                        <a href="catalogues/2026-tcd-corporate.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Trophies for Distinction Corporate 2026</span><span class="pdf-pill">PDF, 7 MB</span></a>
-                        <a href="catalogues/2026-evaton-corporate.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Some Really Different Trophies Corporate 2026</span><span class="pdf-pill">PDF, 3 MB</span></a>
-                    </div>
-                </div>
-                <div id="dance" class="catalogue-card fade-in-up">
-                    <div class="catalogue-banner" style="background:linear-gradient(135deg,#0A3D61,#0D4E7A);">
-                        <svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5"><circle cx="13" cy="4" r="1.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M10 8l3 2 2-3M13 10l1 4-2.5 2.5M13 10l-2 3-2.5 1"/></svg>
-                        <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:600;">Dance</span>
-                    </div>
-                    <div class="catalogue-body">
-                        <h3>Dance Catalogue</h3>
-                        <a href="catalogues/2026-tcd-dance.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Trophies for Distinction Dance 2026</span><span class="pdf-pill">PDF, 14 MB</span></a>
-                        <a href="catalogues/2026-evaton-dance.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Some Really Different Trophies Dance 2026</span><span class="pdf-pill">PDF, 7 MB</span></a>
-                    </div>
-                </div>
-                <div id="football" class="catalogue-card fade-in-up">
-                    <div class="catalogue-banner" style="background:linear-gradient(135deg,#0D4E7A,#0A3D61);">
-                        <svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><polygon points="12,6 14.5,8.5 13.5,11.5 10.5,11.5 9.5,8.5" stroke-linejoin="round"/><line x1="9.5" y1="8.5" x2="4.5" y2="9.5"/><line x1="14.5" y1="8.5" x2="18.5" y2="7"/><line x1="10.5" y1="11.5" x2="8" y2="15"/><line x1="13.5" y1="11.5" x2="16" y2="15"/></svg>
-                        <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:600;">Football</span>
-                    </div>
-                    <div class="catalogue-body">
-                        <h3>Football Catalogue</h3>
-                        <a href="catalogues/2026-tcd-football.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Trophies for Distinction Football 2026</span><span class="pdf-pill">PDF, 9 MB</span></a>
-                        <a href="catalogues/2026-evaton-football.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Some Really Different Trophies Football 2026</span><span class="pdf-pill">PDF, 5 MB</span></a>
-                    </div>
-                </div>
-                <div id="netball" class="catalogue-card fade-in-up">
-                    <div class="catalogue-banner" style="background:linear-gradient(135deg,#2BBCD6,#7DD9EC);">
-                        <svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="14" r="6"/><ellipse cx="12" cy="6" rx="4" ry="2"/><line x1="12" y1="8" x2="12" y2="8.5"/></svg>
-                        <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:600;">Netball</span>
-                    </div>
-                    <div class="catalogue-body">
-                        <h3>Netball Catalogue</h3>
-                        <a href="catalogues/2026-tcd-netball.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Trophies for Distinction Netball 2026</span><span class="pdf-pill">PDF, 10 MB</span></a>
-                        <a href="catalogues/2026-evaton-netball.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Some Really Different Trophies Netball 2026</span><span class="pdf-pill">PDF, 5 MB</span></a>
-                    </div>
-                </div>
-                <div id="rugby" class="catalogue-card fade-in-up">
-                    <div class="catalogue-banner" style="background:linear-gradient(135deg,#0A3D61,#2BBCD6);">
-                        <svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5"><ellipse cx="12" cy="12" rx="9" ry="6"/><path stroke-linecap="round" d="M12 6v12"/><path stroke-linecap="round" d="M7.5 9.5h9"/><path stroke-linecap="round" d="M7.5 14.5h9"/></svg>
-                        <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:600;">Rugby</span>
-                    </div>
-                    <div class="catalogue-body">
-                        <h3>Rugby Catalogue</h3>
-                        <a href="catalogues/2026-tcd-rugby.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Trophies for Distinction Rugby 2026</span><span class="pdf-pill">PDF, 10 MB</span></a>
-                        <a href="catalogues/2026-evaton-rugby.pdf" target="_blank" rel="noopener" class="catalogue-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3"/></svg><span>Some Really Different Trophies Rugby 2026</span><span class="pdf-pill">PDF, 6 MB</span></a>
-                    </div>
-                </div>
-                <div id="other" class="catalogue-card fade-in-up">
-                    <div class="catalogue-banner" style="background:linear-gradient(135deg,#0D4E7A,#0A3D61);">
-                        <svg width="36" height="36" fill="none" viewBox="0 0 24 24" stroke="#fff" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 3h6M7 3a2 2 0 00-2 2v1a5 5 0 005 5h4a5 5 0 005-5V5a2 2 0 00-2-2M9 11v3m6-3v3M7 20h10M9 14h6"/></svg>
-                        <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:600;">All Sports</span>
-                    </div>
-                    <div class="catalogue-body">
-                        <h3>Can't find your sport?</h3>
-                        <p style="font-size:13.5px;color:var(--text-light);flex:1;">We cater for many sports beyond these catalogues. Get in touch and we'll find the right award for you.</p>
-                        <a href="contact.html" class="catalogue-btn-cyan">Contact Us for Help</a>
-                    </div>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="section-wrap-narrow">
-            <div class="center" style="margin-bottom:50px;">
-                <h2 class="section-title">We also do</h2>
-                <p class="section-sub center">Beyond catalogued products, we offer a range of additional services. <a href="contact.html" style="color:var(--cyan);font-weight:700;text-decoration:none;">Get in touch</a> to find out more.</p>
+    <section class="x-section">
+        <div class="x-wrap">
+            <div class="x-head">
+                <div>
+                    <p class="x-eyebrow">We also do</p>
+                    <h2 class="x-pair">Beyond the catalogues. <span>Badges and engraving.</span></h2>
+                </div>
             </div>
-            <div class="grid-2" style="align-items:stretch;">
-                <div class="info-card fade-in-up">
-                    <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="6" width="18" height="13" rx="2"/><path stroke-linecap="round" d="M8 10h8M8 14h5"/><path stroke-linecap="round" d="M9 3h6v3H9z"/></svg></div>
-                    <h3>Name badges</h3>
-                    <p>Custom name badges for clubs, schools, corporate teams and events. Available in metal, acrylic and resin with printed or engraved text and logos.</p>
-                    <a href="contact.html" style="color:var(--cyan);font-weight:700;font-size:14px;text-decoration:none;display:inline-block;margin-top:12px;">Enquire about name badges &rarr;</a>
-                </div>
-                <div class="info-card fade-in-up">
-                    <div class="icon-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M15.232 5.232l3.536 3.536M9 13l6.586-6.586a2 2 0 012.828 2.828L11.828 15.828a4 4 0 01-1.414.828l-3 1 1-3a4 4 0 01.828-1.414z"/></svg></div>
-                    <h3>Engraving</h3>
-                    <p>In-house laser engraving on trophies, medals, plaques, drinkware and more. Bring your own item or purchase through us for fast turnaround.</p>
-                    <a href="engraving.html" style="color:var(--cyan);font-weight:700;font-size:14px;text-decoration:none;display:inline-block;margin-top:12px;">Learn about engraving &rarr;</a>
-                </div>
+            <div class="x-cards">
+                <a class="x-card" href="contact.html">
+                    <img loading="lazy" decoding="async" src="assets/images/opt/gallery-5-1200.webp" srcset="assets/images/opt/gallery-5-640.webp 640w, assets/images/opt/gallery-5-1200.webp 1200w" sizes="(min-width: 760px) 50vw, 100vw" alt="">
+                    <span class="x-glass">Enquire</span>
+                    <span class="x-card__body"><span><h3>Name badges</h3><p>Custom name badges for clubs, schools, corporate teams and events. Available in metal, acrylic and resin with printed or engraved text and logos.</p></span><span class="x-card__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+                </a>
+                <a class="x-card" href="engraving.html">
+                    <img loading="lazy" decoding="async" src="assets/images/opt/engraving-hero-1200.webp" srcset="assets/images/opt/engraving-hero-640.webp 640w, assets/images/opt/engraving-hero-1200.webp 1200w" sizes="(min-width: 760px) 50vw, 100vw" alt="">
+                    <span class="x-glass">In-house</span>
+                    <span class="x-card__body"><span><h3>Engraving</h3><p>In-house laser engraving on trophies, medals, plaques, drinkware and more. Bring your own item or purchase through us for fast turnaround.</p></span><span class="x-card__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></span>
+                </a>
             </div>
         </div>
     </section>
