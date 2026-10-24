@@ -662,3 +662,4 @@ section.x-section { padding-top: var(--section); padding-bottom: var(--section);
 /* Homepage hero keeps its original vertical padding (was inherited from the old page styles) */
 section.x-hero { padding-top: 110px; padding-bottom: 110px; }
 @media (max-width: 640px) { section.x-hero { padding-top: 70px; padding-bottom: 70px; } }
+.x-cards .x-card { aspect-ratio: 3 / 2; } @media (max-width: 760px) { .x-cards .x-card { aspect-ratio: 4 / 3; } }
