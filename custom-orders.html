@@ -154,6 +154,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.sportsgift.com.au/"}, {"@type": "ListItem", "position": 2, "name": "Custom Orders", "item": "https://www.sportsgift.com.au/custom-orders.html"}]}</script>
     <link rel="stylesheet" href="assets/css/upgrade.css">
 </head>
 <body>
@@ -181,6 +182,8 @@
     </div>
 
     <div id="main" tabindex="-1"></div><section class="page-hero">
+        <img class="sg-hero-bg" src="assets/images/opt/gallery-4-1200.webp" srcset="assets/images/opt/gallery-4-640.webp 640w, assets/images/opt/gallery-4-1200.webp 1200w, assets/images/opt/gallery-4-1920.webp 1920w" sizes="100vw" alt="" decoding="async">
+        <nav class="sg-crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Custom Orders</span></nav>
         <div class="kicker">Bespoke awards</div>
         <h1>Custom <em>orders.</em></h1>
         <p>Fully bespoke awards designed around your club, event or brand.</p>
@@ -230,45 +233,45 @@
 
                     <div class="form-row2">
                         <div class="form-group">
-                            <label>Your Name *</label>
-                            <input type="text" name="name" placeholder="Jane Smith" required>
+                            <label for="custom-orders-name">Your Name *</label>
+                            <input id="custom-orders-name" type="text" name="name" placeholder="Jane Smith" required>
                         </div>
                         <div class="form-group">
-                            <label>Organisation / Club</label>
-                            <input type="text" name="organisation" placeholder="North Sydney Football Club">
-                        </div>
-                    </div>
-                    <div class="form-row2">
-                        <div class="form-group">
-                            <label>Email *</label>
-                            <input type="email" name="email" placeholder="jane@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Phone</label>
-                            <input type="tel" name="phone" placeholder="0400 000 000">
+                            <label for="custom-orders-organisation">Organisation / Club</label>
+                            <input id="custom-orders-organisation" type="text" name="organisation" placeholder="North Sydney Football Club">
                         </div>
                     </div>
                     <div class="form-row2">
                         <div class="form-group">
-                            <label>Product Type *</label>
-                            <select name="product_type" required>
+                            <label for="custom-orders-email">Email *</label>
+                            <input id="custom-orders-email" type="email" name="email" placeholder="jane@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="custom-orders-phone">Phone</label>
+                            <input id="custom-orders-phone" type="tel" name="phone" placeholder="0400 000 000">
+                        </div>
+                    </div>
+                    <div class="form-row2">
+                        <div class="form-group">
+                            <label for="custom-orders-product_type">Product Type *</label>
+                            <select id="custom-orders-product_type" name="product_type" required>
                                 <option value="">Select…</option>
                                 <option>Trophy</option><option>Medal</option><option>Plaque</option>
                                 <option>Shield</option><option>Glass Award</option><option>Other</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Quantity *</label>
-                            <input type="number" name="quantity" min="1" placeholder="e.g. 50" required>
+                            <label for="custom-orders-quantity">Quantity *</label>
+                            <input id="custom-orders-quantity" type="number" name="quantity" min="1" placeholder="e.g. 50" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Required By Date</label>
-                        <input type="date" name="required_by">
+                        <label for="custom-orders-required_by">Required By Date</label>
+                        <input id="custom-orders-required_by" type="date" name="required_by">
                     </div>
                     <div class="form-group">
-                        <label>Details &amp; Special Requirements</label>
-                        <textarea name="message" placeholder="Describe your award, engraving text, colours, logo requirements…"></textarea>
+                        <label for="custom-orders-message">Details &amp; Special Requirements</label>
+                        <textarea id="custom-orders-message" name="message" placeholder="Describe your award, engraving text, colours, logo requirements…"></textarea>
                     </div>
                     <p class="form-note">Have artwork or a logo? Email it to <a href="mailto:sales@sportsgift.com.au" style="color:var(--cyan);">sales@sportsgift.com.au</a> after submitting.</p>
                     <button type="submit" id="custom-quote-submit" class="form-submit"><span id="custom-quote-label">Submit Quote Request</span></button>
@@ -294,7 +297,7 @@
                 </div>
             </div>
             <div class="footer-column">
-                <h4>Products</h4>
+                <p class="footer-heading">Products</p>
                 <ul>
                     <li><a href="products.html">All Products</a></li>
                     <li><a href="engraving.html">Engraving Services</a></li>
@@ -303,14 +306,14 @@
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>Company</h4>
+                <p class="footer-heading">Company</p>
                 <ul>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>Contact</h4>
+                <p class="footer-heading">Contact</p>
                 <ul>
                     <li><a href="tel:0295401000">(02) 9540 1000</a></li>
                     <li style="margin-top:14px;"><a href="mailto:sales@sportsgift.com.au">sales@sportsgift.com.au</a></li>
@@ -369,5 +372,6 @@
     </script>
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
   <script defer src="/_vercel/insights/script.js"></script>
+    <script src="assets/js/upgrade.js" defer></script>
 </body>
 </html>

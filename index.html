@@ -702,28 +702,28 @@
                     <input type="hidden" name="redirect" value="" />
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Your Name *</label>
-                            <input type="text" name="name" placeholder="Jane Smith" required>
+                            <label for="index-name">Your Name *</label>
+                            <input id="index-name" type="text" name="name" placeholder="Jane Smith" required>
                         </div>
                         <div class="form-group">
-                            <label>Phone</label>
-                            <input type="tel" name="phone" placeholder="0400 000 000">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Email Address *</label>
-                            <input type="email" name="email" placeholder="jane@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Organisation</label>
-                            <input type="text" name="organisation" placeholder="North Sydney Football Club">
+                            <label for="index-phone">Phone</label>
+                            <input id="index-phone" type="tel" name="phone" placeholder="0400 000 000">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label>Product Type *</label>
-                            <select name="product_type" required>
+                            <label for="index-email">Email Address *</label>
+                            <input id="index-email" type="email" name="email" placeholder="jane@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="index-organisation">Organisation</label>
+                            <input id="index-organisation" type="text" name="organisation" placeholder="North Sydney Football Club">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="index-product_type">Product Type *</label>
+                            <select id="index-product_type" name="product_type" required>
                                 <option value="">Select…</option>
                                 <option>Trophy</option>
                                 <option>Medal</option>
@@ -734,13 +734,13 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label>Quantity *</label>
-                            <input type="number" name="quantity" min="1" placeholder="e.g. 50" required>
+                            <label for="index-quantity">Quantity *</label>
+                            <input id="index-quantity" type="number" name="quantity" min="1" placeholder="e.g. 50" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Tell Us About the Job</label>
-                        <textarea name="message" placeholder="Describe your award, engraving text, colours, logo requirements…"></textarea>
+                        <label for="index-message">Tell Us About the Job</label>
+                        <textarea id="index-message" name="message" placeholder="Describe your award, engraving text, colours, logo requirements…"></textarea>
                     </div>
                     <div class="form-group" style="margin-bottom:0;">
                         <button type="submit" id="quoteSubmitBtn">Get My Free Quote</button>
@@ -766,7 +766,7 @@
                 </div>
             </div>
             <div class="footer-column">
-                <h4>Products</h4>
+                <p class="footer-heading">Products</p>
                 <ul>
                     <li><a href="products.html">All Products</a></li>
                     <li><a href="engraving.html">Engraving Services</a></li>
@@ -775,7 +775,7 @@
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>Company</h4>
+                <p class="footer-heading">Company</p>
                 <ul>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -783,7 +783,7 @@
                 </ul>
             </div>
             <div class="footer-column">
-                <h4>Contact</h4>
+                <p class="footer-heading">Contact</p>
                 <ul>
                     <li><a href="tel:0295401000">(02) 9540 1000</a></li>
                     <li style="margin-top:14px;"><a href="mailto:sales@sportsgift.com.au">sales@sportsgift.com.au</a></li>
@@ -888,5 +888,6 @@
     </script>
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
   <script defer src="/_vercel/insights/script.js"></script>
+    <script src="assets/js/upgrade.js" defer></script>
 </body>
 </html>
