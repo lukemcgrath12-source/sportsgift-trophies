@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /holding.html
+
+Sitemap: https://www.sportsgift.com.au/sitemap.xml
