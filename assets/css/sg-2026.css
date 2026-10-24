@@ -295,3 +295,4 @@ section.x-section { padding-top: var(--section); padding-bottom: var(--section);
 .catalogue-body h3 { letter-spacing: -0.01em; }
 .catalogue-btn { border-left-width: 0 !important; background: var(--ice) !important; }
 .catalogue-btn:hover { background: var(--deep-04) !important; }
+.x-hero p.x-glass { font-size: 11px; color: #fff; margin: 0 0 22px; max-width: none; } @media (max-width: 600px) { .x-hero p.x-glass { font-size: 10px; } }
