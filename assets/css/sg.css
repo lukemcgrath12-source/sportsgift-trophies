@@ -663,3 +663,18 @@ section.x-section { padding-top: var(--section); padding-bottom: var(--section);
 section.x-hero { padding-top: 110px; padding-bottom: 110px; }
 @media (max-width: 640px) { section.x-hero { padding-top: 70px; padding-bottom: 70px; } }
 .x-cards .x-card { aspect-ratio: 3 / 2; } @media (max-width: 760px) { .x-cards .x-card { aspect-ratio: 4 / 3; } }
+
+/* ---------- Legal pages: Terms and Conditions, Privacy Policy ---------- */
+.x-footer__legal { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.x-legal { max-width: 46em; margin: 0 auto; }
+.x-legal__updated { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 13px; color: var(--muted); margin: 0 0 8px; }
+.x-legal h2 { font-weight: 700; font-size: clamp(21px, 2.2vw, 26px); line-height: 1.25; letter-spacing: -0.02em; margin: 44px 0 14px; }
+.x-legal p, .x-legal li { color: var(--muted); font-size: 17px; line-height: 1.7; }
+.x-legal p { margin: 0 0 14px; }
+.x-legal ul { margin: 0 0 16px; padding-left: 22px; }
+.x-legal li { margin-bottom: 6px; }
+.x-legal li::marker { color: var(--cyan); }
+.x-legal strong { color: var(--text); }
+.x-legal a { color: var(--deep); font-weight: 700; text-decoration: underline; text-decoration-color: var(--cyan); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.x-legal a:hover { color: var(--deep-70); }
+.x-legal__contact { list-style: none; padding-left: 0 !important; }
