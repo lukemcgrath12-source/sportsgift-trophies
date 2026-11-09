@@ -10,6 +10,9 @@
     try { if (window.va) window.va('event', { name: name, data: props || {} }); } catch (e) {}
     try { (window.dataLayer = window.dataLayer || []).push(Object.assign({ event: name }, props || {})); } catch (e) {}
     try { if (window.gtag) window.gtag('event', name, props || {}); } catch (e) {}
+    // GA4 standard names so leads and calls line up with other Latitude client properties
+    var alias = { call_click: 'click_to_call', email_click: 'click_email', quote_submitted: 'generate_lead' }[name];
+    try { if (alias && window.gtag) window.gtag('event', alias, props || {}); } catch (e) {}
   };
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href]');
@@ -18,6 +21,9 @@
     if (h.indexOf('tel:') === 0) sgTrack('call_click', { page: location.pathname });
     else if (h.indexOf('mailto:') === 0) sgTrack('email_click', { page: location.pathname });
     else if (/catalogues\/.*\.pdf$/.test(h)) sgTrack('catalogue_open', { file: h.split('/').pop() });
+    else if (/facebook\.com|instagram\.com/.test(h)) sgTrack('social_click', { platform: h.indexOf('instagram') > -1 ? 'instagram' : 'facebook', page: location.pathname });
+    else if (/google\.com\/maps|search\.google\.com\/local|g\.page|maps\.app\.goo\.gl/.test(h)) sgTrack('gbp_click', { page: location.pathname });
+    else if (/quote|custom-orders|contact\.html/i.test(h) || /quote|enquir/i.test(a.textContent)) sgTrack('cta_click', { link_text: (a.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 60), page: location.pathname });
   }, true);
 
   /* ---------- Header: scrolled state ---------- */
